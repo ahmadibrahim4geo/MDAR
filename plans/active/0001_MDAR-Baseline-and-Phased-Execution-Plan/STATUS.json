@@ -1,7 +1,12 @@
 {
   "id": "0001",
   "title": "MDAR Baseline and Phased Execution Plan",
-  "status": "DRAFT",
-  "revision": 1,
-  "evidence": []
+  "status": "IN_PROGRESS",
+  "approval": "USER_APPROVED",
+  "approvedAt": "2026-11-24T17:22:54+02:00",
+  "revision": 2,
+  "evidence": [
+    "reports/00_BASELINE_REPORT.md",
+    "testing results/TR_0001_baseline_math.json"
+  ]
 }

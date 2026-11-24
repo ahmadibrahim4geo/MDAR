@@ -13,9 +13,12 @@ export enum DatumType {
   EGYPT1907 = "EGYPT1907",
   AIN_EL_ABD1970 = "AIN_EL_ABD1970",
   KSA_GRF17 = "KSA_GRF17",
+  MTRF2000 = "MTRF2000",
   PALESTINE1923 = "PALESTINE1923",
   ED50 = "ED50",
   QND95 = "QND95",
+  QATAR1948 = "QATAR1948",
+  QATAR1974 = "QATAR1974",
   KGD93 = "KGD93",
   FAHUD = "FAHUD",
   NAHRAWAN1967 = "NAHRAWAN1967",
@@ -23,7 +26,15 @@ export enum DatumType {
   ADINDAN = "ADINDAN",
   DEIR_EZ_ZOR = "DEIR_EZ_ZOR",
   VOIROL1875 = "VOIROL1875",
-  MERCHICH = "MERCHICH"
+  NORD_SAHARA = "NORD_SAHARA",
+  CARTHAGE = "CARTHAGE",
+  MERCHICH = "MERCHICH",
+  LGD2006 = "LGD2006",
+  ELD79 = "ELD79",
+  YEMEN_NGN96 = "YEMEN_NGN96",
+  MAURITANIA1999 = "MAURITANIA1999",
+  AFGOOYE = "AFGOOYE",
+  GRAND_COMOROS = "GRAND_COMOROS"
 }
 
 export type CRSCategory =
@@ -78,13 +89,18 @@ export interface CRSDefinition {
     rf: number; // reciprocal of flattening (1/f)
   };
   projection?: {
-    type: "TM" | "WEBMERCATOR";
+    type: "TM" | "WEBMERCATOR" | "LCC" | "CASSINI";
     cm: number; // Central Meridian in degrees
     scaleFactor: number; // scale factor at central meridian (k0)
     falseEasting: number;
     falseNorthing: number;
     latOrigin: number; // Latitude of origin in degrees
   };
+  proj4String?: string;
+  accuracyMeters?: number;
+  operationId?: string;
+  areaName?: string;
+  bbox?: [number, number, number, number]; // [minLat, minLon, maxLat, maxLon]
 }
 
 export interface AppSettings {
@@ -119,6 +135,8 @@ export interface BatchRow {
   status: "empty" | "idle" | "success" | "error";
   warnings: string[];
   errorMsg?: string;
+  operationId?: string;
+  accuracyMeters?: number;
 }
 
 export interface TranslationDictionary {
@@ -218,4 +236,7 @@ export interface SingleConversionResult {
   dms?: string;
   zone?: string;
   warnings: string[];
+  operationId?: string;
+  accuracyMeters?: number;
+  provenance?: string;
 }

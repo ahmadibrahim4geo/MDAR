@@ -1,16 +1,15 @@
 # مدار – MِDAR | Current Handoff & Session State
 
 - **Project:** مدار – MِDAR (Mapping, Datum Adjustment and Reprojection)
-- **Status:** INITIALIZED & GOVERNANCE ACTIVE
+- **Status:** PLAN APPROVED & PHASE 1/2 IN PROGRESS
+- **Current Phase:** Phase 1 (Engine Feasibility) & Phase 2 (Verified Arab & Global CRS Catalog)
 - **Baseline Health:**
   - TypeScript Compilation: `tsc --noEmit` PASSED (0 errors)
-  - Production Build: `vite build` PASSED (dist/ bundle created cleanly)
-  - Governance Audit: PASSED (0 missing required directories, 0 undocumented directories)
-- **Governance Setup:**
-  - Administrative Reference: `AGENTS.md`
-  - Scientific & Geodetic Reference: `MDAR_MASTER_DEVELOPMENT_PLAN.md`
-  - Structure Documentation: `PROJECT_STRUCTURE.md` & `.gis-project-governance.json`
-  - Candidate Skills Quarantined: `0001_proj-wasm-engine`, `0002_excel-ooxml-engineering`, `0003_gdal3-vector-wasm`
-- **Current Active Plan:** `plans/active/0001_mdar-baseline-and-phased-execution-plan`
-- **Next Action:** Review baseline report `reports/00_BASELINE_REPORT.md` and proceed with Phase 1 feasibility and Phase 2 catalog validation.
-- **Test Status:** T0 (Static/Build) VERIFIED; T1 (Math/Control Points) INITIAL FIXTURES STAGED.
+  - Production Build: `vite build` PASSED
+  - Governance Audit: PASSED (0 missing required directories, 0 drift)
+  - Mathematical Unit Tests: `tests/baseline_math.ts` PASSED (8/8 tests, residuals < 6mm)
+- **Active Plan:** `plans/active/0001_MDAR-Baseline-and-Phased-Execution-Plan` (Status: IN_PROGRESS)
+- **Next Operations:**
+  1. Evaluate and integrate `proj4` as a client-side engine for verified EPSG transformations.
+  2. Audit and correct Egyptian systems (Belts 1-4, MTM zones 1-7, Molodensky-Badekas parameters).
+  3. Validate Arab 22 national grids with official EPSG parameters and explicit approximation warnings.

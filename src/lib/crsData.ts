@@ -137,7 +137,10 @@ const EGYPT_NATIONAL_SYSTEMS: CRSDefinition[] = [
       falseEasting: 615000.0,
       falseNorthing: 810000.0,
       latOrigin: 30.0
-    }
+    },
+    proj4String: "+proj=tmerc +lat_0=30 +lon_0=31 +k=1 +x_0=615000 +y_0=810000 +a=6378200 +rf=298.3 +units=m +no_defs",
+    operationId: "EPSG:7697",
+    accuracyMeters: 1.2
   },
   {
     id: "CUSTOM:EGY_ETM_SOUTH_RED",
@@ -158,7 +161,10 @@ const EGYPT_NATIONAL_SYSTEMS: CRSDefinition[] = [
       falseEasting: 615000.0,
       falseNorthing: 1810000.0,
       latOrigin: 30.0
-    }
+    },
+    proj4String: "+proj=tmerc +lat_0=30 +lon_0=31 +k=1 +x_0=615000 +y_0=1810000 +a=6378200 +rf=298.3 +units=m +no_defs",
+    operationId: "EPSG:7697",
+    accuracyMeters: 1.2
   },
   {
     id: "EPSG:22991",
@@ -180,7 +186,10 @@ const EGYPT_NATIONAL_SYSTEMS: CRSDefinition[] = [
       falseEasting: 300000.0,
       falseNorthing: 1100000.0,
       latOrigin: 30.0
-    }
+    },
+    proj4String: "+proj=tmerc +lat_0=30 +lon_0=35 +k=1 +x_0=300000 +y_0=1100000 +a=6378200 +rf=298.3 +units=m +no_defs",
+    operationId: "EPSG:7697",
+    accuracyMeters: 1.2
   },
   {
     id: "EPSG:22993",
@@ -202,7 +211,10 @@ const EGYPT_NATIONAL_SYSTEMS: CRSDefinition[] = [
       falseEasting: 700000.0,
       falseNorthing: 200000.0,
       latOrigin: 30.0
-    }
+    },
+    proj4String: "+proj=tmerc +lat_0=30 +lon_0=27 +k=1 +x_0=700000 +y_0=200000 +a=6378200 +rf=298.3 +units=m +no_defs",
+    operationId: "EPSG:7697",
+    accuracyMeters: 1.2
   },
   {
     id: "EPSG:22994",
@@ -224,7 +236,10 @@ const EGYPT_NATIONAL_SYSTEMS: CRSDefinition[] = [
       falseEasting: 700000.0,
       falseNorthing: 1200000.0,
       latOrigin: 30.0
-    }
+    },
+    proj4String: "+proj=tmerc +lat_0=30 +lon_0=27 +k=1 +x_0=700000 +y_0=1200000 +a=6378200 +rf=298.3 +units=m +no_defs",
+    operationId: "EPSG:7697",
+    accuracyMeters: 1.2
   },
   {
     id: "AUTO:ETM",
@@ -258,7 +273,9 @@ const EGYPT_NATIONAL_SYSTEMS: CRSDefinition[] = [
       falseEasting: 300000.0,
       falseNorthing: 0.0,
       latOrigin: 0.0
-    }
+    },
+    proj4String: "+proj=tmerc +lat_0=0 +lon_0=25.5 +k=0.9999 +x_0=300000 +y_0=0 +ellps=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.0
   },
   {
     id: "CUSTOM:EGY_MTM_2",
@@ -279,7 +296,9 @@ const EGYPT_NATIONAL_SYSTEMS: CRSDefinition[] = [
       falseEasting: 300000.0,
       falseNorthing: 0.0,
       latOrigin: 0.0
-    }
+    },
+    proj4String: "+proj=tmerc +lat_0=0 +lon_0=28.5 +k=0.9999 +x_0=300000 +y_0=0 +ellps=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.0
   },
   {
     id: "CUSTOM:EGY_MTM_3",
@@ -300,7 +319,9 @@ const EGYPT_NATIONAL_SYSTEMS: CRSDefinition[] = [
       falseEasting: 300000.0,
       falseNorthing: 0.0,
       latOrigin: 0.0
-    }
+    },
+    proj4String: "+proj=tmerc +lat_0=0 +lon_0=31.5 +k=0.9999 +x_0=300000 +y_0=0 +ellps=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.0
   },
   {
     id: "CUSTOM:EGY_MTM_4",
@@ -321,7 +342,9 @@ const EGYPT_NATIONAL_SYSTEMS: CRSDefinition[] = [
       falseEasting: 300000.0,
       falseNorthing: 0.0,
       latOrigin: 0.0
-    }
+    },
+    proj4String: "+proj=tmerc +lat_0=0 +lon_0=34.5 +k=0.9999 +x_0=300000 +y_0=0 +ellps=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.0
   },
   {
     id: "CUSTOM:EGY_MTM_5",
@@ -342,7 +365,9 @@ const EGYPT_NATIONAL_SYSTEMS: CRSDefinition[] = [
       falseEasting: 300000.0,
       falseNorthing: 0.0,
       latOrigin: 0.0
-    }
+    },
+    proj4String: "+proj=tmerc +lat_0=0 +lon_0=37.5 +k=0.9999 +x_0=300000 +y_0=0 +ellps=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.0
   },
   {
     id: "AUTO:MTM",
@@ -373,7 +398,9 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "عالمي",
     countryNameEn: "Global",
     isLocal: false,
-    ellipsoid: ELLIPSOID_WGS84
+    ellipsoid: ELLIPSOID_WGS84,
+    proj4String: "+proj=longlat +datum=WGS84 +no_defs",
+    accuracyMeters: 0.0
   },
   {
     id: "EPSG:4229",
@@ -387,7 +414,10 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "مصر",
     countryNameEn: "Egypt",
     isLocal: true,
-    ellipsoid: ELLIPSOID_HELMERT1906
+    ellipsoid: ELLIPSOID_HELMERT1906,
+    proj4String: "+proj=longlat +a=6378200 +rf=298.3 +no_defs",
+    operationId: "EPSG:7697",
+    accuracyMeters: 1.2
   },
   {
     id: "EPSG:4204",
@@ -401,13 +431,16 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "المملكة العربية السعودية",
     countryNameEn: "Saudi Arabia",
     isLocal: true,
-    ellipsoid: ELLIPSOID_INTERNATIONAL1924
+    ellipsoid: ELLIPSOID_INTERNATIONAL1924,
+    proj4String: "+proj=longlat +ellps=intl +towgs84=-143,-236,7,0,0,0,0 +no_defs",
+    operationId: "EPSG:1107",
+    accuracyMeters: 18.0
   },
   {
-    id: "EPSG:9236",
-    nameAr: "KSA-GRF17 / SANSER Geographic (الإطار المرجعي السعودي الحديث)",
-    nameEn: "KSA-GRF17 / SANSER Geographic (Saudi Arabia)",
-    epsg: "9236",
+    id: "EPSG:9333",
+    nameAr: "KSA-GRF17 Geographic (الإطار المرجعي السعودي الحديث)",
+    nameEn: "KSA-GRF17 Geographic (Saudi Arabia SANSER)",
+    epsg: "9333",
     type: CRSType.GEOGRAPHIC,
     datum: DatumType.KSA_GRF17,
     category: "GEOGRAPHIC",
@@ -415,13 +448,16 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "المملكة العربية السعودية",
     countryNameEn: "Saudi Arabia",
     isLocal: true,
-    ellipsoid: ELLIPSOID_GRS80
+    ellipsoid: ELLIPSOID_GRS80,
+    proj4String: "+proj=longlat +ellps=GRS80 +no_defs",
+    operationId: "ITRF2014 / Epoch 2017.0",
+    accuracyMeters: 0.05
   },
   {
-    id: "EPSG:4286",
+    id: "EPSG:4614",
     nameAr: "QND95 / Qatar National Datum Geographic (دولة قطر)",
-    nameEn: "QND95 / Qatar National Datum Geographic",
-    epsg: "4286",
+    nameEn: "QND95 Geographic (Qatar)",
+    epsg: "4614",
     type: CRSType.GEOGRAPHIC,
     datum: DatumType.QND95,
     category: "GEOGRAPHIC",
@@ -429,7 +465,10 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "قطر",
     countryNameEn: "Qatar",
     isLocal: true,
-    ellipsoid: ELLIPSOID_INTERNATIONAL1924
+    ellipsoid: ELLIPSOID_INTERNATIONAL1924,
+    proj4String: "+proj=longlat +ellps=intl +towgs84=-119.425,-303.909,-11.445,0,0,0,0 +no_defs",
+    operationId: "EPSG:1951",
+    accuracyMeters: 1.0
   },
   {
     id: "EPSG:4319",
@@ -443,7 +482,9 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "الكويت",
     countryNameEn: "Kuwait",
     isLocal: true,
-    ellipsoid: ELLIPSOID_GRS80
+    ellipsoid: ELLIPSOID_GRS80,
+    proj4String: "+proj=longlat +ellps=GRS80 +no_defs",
+    accuracyMeters: 0.05
   },
   {
     id: "EPSG:4232",
@@ -457,12 +498,15 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "سلطنة عُمان",
     countryNameEn: "Oman",
     isLocal: true,
-    ellipsoid: ELLIPSOID_CLARK1880
+    ellipsoid: ELLIPSOID_CLARK1880,
+    proj4String: "+proj=longlat +ellps=clrk80 +towgs84=-346,-1,224,0,0,0,0 +no_defs",
+    operationId: "EPSG:1603",
+    accuracyMeters: 10.0
   },
   {
     id: "EPSG:4270",
-    nameAr: "Nahrawan 1967 Geographic (الإمارات وعُمان والخليج)",
-    nameEn: "Nahrawan 1967 Geographic (UAE & Gulf)",
+    nameAr: "Nahrwan 1967 Geographic (الإمارات وعُمان والخليج)",
+    nameEn: "Nahrwan 1967 Geographic (UAE & Gulf)",
     epsg: "4270",
     type: CRSType.GEOGRAPHIC,
     datum: DatumType.NAHRAWAN1967,
@@ -471,7 +515,10 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "الإمارات العربية المتحدة",
     countryNameEn: "UAE",
     isLocal: true,
-    ellipsoid: ELLIPSOID_CLARK1880
+    ellipsoid: ELLIPSOID_CLARK1880,
+    proj4String: "+proj=longlat +ellps=clrk80 +towgs84=-249,-156,-381,0,0,0,0 +no_defs",
+    operationId: "EPSG:1578",
+    accuracyMeters: 15.0
   },
   {
     id: "EPSG:4281",
@@ -485,7 +532,10 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "فلسطين",
     countryNameEn: "Palestine",
     isLocal: true,
-    ellipsoid: ELLIPSOID_CLARK1880
+    ellipsoid: ELLIPSOID_CLARK1880,
+    proj4String: "+proj=longlat +ellps=clrk80 +towgs84=-275.722,-94.782,340.894,-8.001,-4.42,-11.821,1 +no_defs",
+    operationId: "EPSG:1174",
+    accuracyMeters: 2.0
   },
   {
     id: "EPSG:4230",
@@ -499,13 +549,16 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "الأردن",
     countryNameEn: "Jordan",
     isLocal: true,
-    ellipsoid: ELLIPSOID_INTERNATIONAL1924
+    ellipsoid: ELLIPSOID_INTERNATIONAL1924,
+    proj4String: "+proj=longlat +ellps=intl +towgs84=-87,-98,-121,0,0,0,0 +no_defs",
+    operationId: "EPSG:1618",
+    accuracyMeters: 10.0
   },
   {
-    id: "EPSG:4257",
+    id: "EPSG:4743",
     nameAr: "Karbala 1979 Geographic (جمهورية العراق)",
     nameEn: "Karbala 1979 Geographic (Iraq)",
-    epsg: "4257",
+    epsg: "4743",
     type: CRSType.GEOGRAPHIC,
     datum: DatumType.KARBALA1979,
     category: "GEOGRAPHIC",
@@ -513,7 +566,10 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "العراق",
     countryNameEn: "Iraq",
     isLocal: true,
-    ellipsoid: ELLIPSOID_CLARK1880
+    ellipsoid: ELLIPSOID_CLARK1880,
+    proj4String: "+proj=longlat +ellps=clrk80 +towgs84=-384.7,10.4,219.8,0,0,0,0 +no_defs",
+    operationId: "EPSG:1177",
+    accuracyMeters: 10.0
   },
   {
     id: "EPSG:4201",
@@ -527,7 +583,10 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "السودان",
     countryNameEn: "Sudan",
     isLocal: true,
-    ellipsoid: ELLIPSOID_CLARK1880
+    ellipsoid: ELLIPSOID_CLARK1880,
+    proj4String: "+proj=longlat +ellps=clrk80 +towgs84=-166,-15,204,0,0,0,0 +no_defs",
+    operationId: "EPSG:1102",
+    accuracyMeters: 12.0
   },
   {
     id: "EPSG:4227",
@@ -541,13 +600,16 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "سوريا",
     countryNameEn: "Syria",
     isLocal: true,
-    ellipsoid: ELLIPSOID_INTERNATIONAL1924
+    ellipsoid: ELLIPSOID_INTERNATIONAL1924,
+    proj4String: "+proj=longlat +ellps=clrk80 +towgs84=-308.7,-19,277.6,0,0,0,0 +no_defs",
+    operationId: "EPSG:1127",
+    accuracyMeters: 10.0
   },
   {
-    id: "EPSG:30791",
+    id: "EPSG:4304",
     nameAr: "Voirol 1875 Geographic (الجزائر)",
     nameEn: "Voirol 1875 Geographic (Algeria)",
-    epsg: "30791",
+    epsg: "4304",
     type: CRSType.GEOGRAPHIC,
     datum: DatumType.VOIROL1875,
     category: "GEOGRAPHIC",
@@ -555,10 +617,47 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "الجزائر",
     countryNameEn: "Algeria",
     isLocal: true,
-    ellipsoid: ELLIPSOID_CLARK1880
+    ellipsoid: ELLIPSOID_CLARK1880,
+    proj4String: "+proj=longlat +ellps=clrk80ign +towgs84=-73,-247,227,0,0,0,0 +no_defs",
+    operationId: "EPSG:1133",
+    accuracyMeters: 10.0
   },
   {
-    id: "EPSG:4261_MAR",
+    id: "EPSG:4307",
+    nameAr: "Nord Sahara 1959 Geographic (الجزائر / شمال الصحراء)",
+    nameEn: "Nord Sahara 1959 Geographic (Algeria)",
+    epsg: "4307",
+    type: CRSType.GEOGRAPHIC,
+    datum: DatumType.NORD_SAHARA,
+    category: "GEOGRAPHIC",
+    countryCode: "DZA",
+    countryNameAr: "الجزائر",
+    countryNameEn: "Algeria",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_CLARK1880,
+    proj4String: "+proj=longlat +ellps=clrk80ign +towgs84=-186,-252,-281,0,0,0,0 +no_defs",
+    operationId: "EPSG:1134",
+    accuracyMeters: 8.0
+  },
+  {
+    id: "EPSG:4223",
+    nameAr: "Carthage Geographic (الجمهورية التونسية)",
+    nameEn: "Carthage Geographic (Tunisia)",
+    epsg: "4223",
+    type: CRSType.GEOGRAPHIC,
+    datum: DatumType.CARTHAGE,
+    category: "GEOGRAPHIC",
+    countryCode: "TUN",
+    countryNameAr: "تونس",
+    countryNameEn: "Tunisia",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_CLARK1880,
+    proj4String: "+proj=longlat +ellps=clrk80ign +towgs84=-263,6,431,0,0,0,0 +no_defs",
+    operationId: "EPSG:1123",
+    accuracyMeters: 5.0
+  },
+  {
+    id: "EPSG:4261",
     nameAr: "Merchich Geographic (المملكة المغربية)",
     nameEn: "Merchich Geographic (Morocco)",
     epsg: "4261",
@@ -569,41 +668,65 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "المغرب",
     countryNameEn: "Morocco",
     isLocal: true,
-    ellipsoid: ELLIPSOID_CLARK1880
+    ellipsoid: ELLIPSOID_CLARK1880,
+    proj4String: "+proj=longlat +ellps=clrk80ign +towgs84=-31,146,47,0,0,0,0 +no_defs",
+    operationId: "EPSG:1159",
+    accuracyMeters: 8.0
   },
   {
-    id: "EPSG:4269_MRT",
-    nameAr: "Leigon / Mauritania Datum (الجمهورية الإسلامية الموريتانية)",
-    nameEn: "Leigon / Mauritania Datum",
-    epsg: "4269",
+    id: "EPSG:4702",
+    nameAr: "Mauritania 1999 Geographic (الجمهورية الإسلامية الموريتانية)",
+    nameEn: "Mauritania 1999 Geographic",
+    epsg: "4702",
     type: CRSType.GEOGRAPHIC,
-    datum: DatumType.WGS84,
+    datum: DatumType.MAURITANIA1999,
     category: "GEOGRAPHIC",
     countryCode: "MRT",
     countryNameAr: "موريتانيا",
     countryNameEn: "Mauritania",
     isLocal: true,
-    ellipsoid: ELLIPSOID_CLARK1880
+    ellipsoid: ELLIPSOID_GRS80,
+    proj4String: "+proj=longlat +ellps=GRS80 +no_defs",
+    accuracyMeters: 0.05
+  },
+  {
+    id: "EPSG:4163",
+    nameAr: "Yemen NGN96 Geographic (الجمهورية اليمنية)",
+    nameEn: "Yemen NGN96 Geographic",
+    epsg: "4163",
+    type: CRSType.GEOGRAPHIC,
+    datum: DatumType.YEMEN_NGN96,
+    category: "GEOGRAPHIC",
+    countryCode: "YEM",
+    countryNameAr: "اليمن",
+    countryNameEn: "Yemen",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_WGS84,
+    proj4String: "+proj=longlat +ellps=WGS84 +no_defs",
+    accuracyMeters: 0.05
   },
   {
     id: "EPSG:4205",
-    nameAr: "Afgooye / Somalia Geographic Datum (جمهورية الصومال الفيدرالية)",
-    nameEn: "Afgooye / Somalia Geographic Datum",
+    nameAr: "Afgooye Geographic (جمهورية الصومال الفيدرالية)",
+    nameEn: "Afgooye Geographic (Somalia)",
     epsg: "4205",
     type: CRSType.GEOGRAPHIC,
-    datum: DatumType.WGS84,
+    datum: DatumType.AFGOOYE,
     category: "GEOGRAPHIC",
     countryCode: "SOM",
     countryNameAr: "الصومال",
     countryNameEn: "Somalia",
     isLocal: true,
-    ellipsoid: ELLIPSOID_CLARK1880
+    ellipsoid: ELLIPSOID_CLARK1880,
+    proj4String: "+proj=longlat +ellps=krass +towgs84=-43,-163,45,0,0,0,0 +no_defs",
+    operationId: "EPSG:1109",
+    accuracyMeters: 20.0
   },
   {
     id: "EPSG:4618",
-    nameAr: "CSG 1967 / Djibouti Geographic Datum (جمهورية جيبوتي)",
-    nameEn: "CSG 1967 / Djibouti Geographic Datum",
-    epsg: "4618",
+    nameAr: "Djibouti WGS 84 Geographic (جمهورية جيبوتي)",
+    nameEn: "Djibouti Geographic / WGS 84",
+    epsg: "4326",
     type: CRSType.GEOGRAPHIC,
     datum: DatumType.WGS84,
     category: "GEOGRAPHIC",
@@ -611,30 +734,126 @@ const GEOGRAPHIC_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "جيبوتي",
     countryNameEn: "Djibouti",
     isLocal: true,
-    ellipsoid: ELLIPSOID_CLARK1880
+    ellipsoid: ELLIPSOID_WGS84,
+    proj4String: "+proj=longlat +datum=WGS84 +no_defs",
+    accuracyMeters: 0.05
   },
   {
-    id: "EPSG:4617",
-    nameAr: "Combani 1950 / Comoros Geographic Datum (الاتحاد القمري)",
-    nameEn: "Combani 1950 / Comoros Geographic Datum",
-    epsg: "4617",
+    id: "EPSG:4646",
+    nameAr: "Grand Comoros Geographic (الاتحاد القمري)",
+    nameEn: "Grand Comoros Geographic",
+    epsg: "4646",
     type: CRSType.GEOGRAPHIC,
-    datum: DatumType.WGS84,
+    datum: DatumType.GRAND_COMOROS,
     category: "GEOGRAPHIC",
     countryCode: "COM",
     countryNameAr: "جزر القمر",
     countryNameEn: "Comoros",
     isLocal: true,
-    ellipsoid: ELLIPSOID_INTERNATIONAL1924
+    ellipsoid: ELLIPSOID_INTERNATIONAL1924,
+    proj4String: "+proj=longlat +ellps=intl +no_defs",
+    accuracyMeters: 10.0
   }
 ];
 
 // Arab & Regional National Systems (Projected Grids)
 const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
-  // KSA (Saudi Arabia)
+  // KSA (Saudi Arabia) - Official Modern Reference Frame SANSER / KSA-GRF17
+  {
+    id: "EPSG:9356",
+    nameAr: "KSA-GRF17 / UTM Zone 36N (السعودية - تبوك والساحل الشمالي الغربي)",
+    nameEn: "KSA-GRF17 / UTM Zone 36N (Tabuk & NW Coast)",
+    epsg: "9356",
+    type: CRSType.PROJECTED,
+    datum: DatumType.KSA_GRF17,
+    category: "ARAB_REGIONAL",
+    countryCode: "KSA",
+    countryNameAr: "المملكة العربية السعودية",
+    countryNameEn: "Saudi Arabia",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_GRS80,
+    projection: { type: "TM", cm: 33.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=36 +ellps=GRS80 +units=m +no_defs",
+    operationId: "ITRF2014 / Epoch 2017.0",
+    accuracyMeters: 0.05
+  },
+  {
+    id: "EPSG:9357",
+    nameAr: "KSA-GRF17 / UTM Zone 37N (السعودية - المدينة المنورة، جدة ومكة المكرمة)",
+    nameEn: "KSA-GRF17 / UTM Zone 37N (Madinah, Jeddah & Makkah)",
+    epsg: "9357",
+    type: CRSType.PROJECTED,
+    datum: DatumType.KSA_GRF17,
+    category: "ARAB_REGIONAL",
+    countryCode: "KSA",
+    countryNameAr: "المملكة العربية السعودية",
+    countryNameEn: "Saudi Arabia",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_GRS80,
+    projection: { type: "TM", cm: 39.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=37 +ellps=GRS80 +units=m +no_defs",
+    operationId: "ITRF2014 / Epoch 2017.0",
+    accuracyMeters: 0.05
+  },
+  {
+    id: "EPSG:9358",
+    nameAr: "KSA-GRF17 / UTM Zone 38N (السعودية - الرياض والوسطى والقصيم)",
+    nameEn: "KSA-GRF17 / UTM Zone 38N (Riyadh & Central Region)",
+    epsg: "9358",
+    type: CRSType.PROJECTED,
+    datum: DatumType.KSA_GRF17,
+    category: "ARAB_REGIONAL",
+    countryCode: "KSA",
+    countryNameAr: "المملكة العربية السعودية",
+    countryNameEn: "Saudi Arabia",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_GRS80,
+    projection: { type: "TM", cm: 45.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=38 +ellps=GRS80 +units=m +no_defs",
+    operationId: "ITRF2014 / Epoch 2017.0",
+    accuracyMeters: 0.05
+  },
+  {
+    id: "EPSG:9359",
+    nameAr: "KSA-GRF17 / UTM Zone 39N (السعودية - الدمام والمنطقة الشرقية)",
+    nameEn: "KSA-GRF17 / UTM Zone 39N (Dammam & Eastern Province)",
+    epsg: "9359",
+    type: CRSType.PROJECTED,
+    datum: DatumType.KSA_GRF17,
+    category: "ARAB_REGIONAL",
+    countryCode: "KSA",
+    countryNameAr: "المملكة العربية السعودية",
+    countryNameEn: "Saudi Arabia",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_GRS80,
+    projection: { type: "TM", cm: 51.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=39 +ellps=GRS80 +units=m +no_defs",
+    operationId: "ITRF2014 / Epoch 2017.0",
+    accuracyMeters: 0.05
+  },
+  {
+    id: "EPSG:9360",
+    nameAr: "KSA-GRF17 / UTM Zone 40N (السعودية - أقصى الحدود الشرقية والربع الخالي)",
+    nameEn: "KSA-GRF17 / UTM Zone 40N (Eastern Border & Rub' al Khali)",
+    epsg: "9360",
+    type: CRSType.PROJECTED,
+    datum: DatumType.KSA_GRF17,
+    category: "ARAB_REGIONAL",
+    countryCode: "KSA",
+    countryNameAr: "المملكة العربية السعودية",
+    countryNameEn: "Saudi Arabia",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_GRS80,
+    projection: { type: "TM", cm: 57.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=40 +ellps=GRS80 +units=m +no_defs",
+    operationId: "ITRF2014 / Epoch 2017.0",
+    accuracyMeters: 0.05
+  },
+
+  // KSA Historic Ain el Abd 1970
   {
     id: "EPSG:20437",
-    nameAr: "Ain el Abd 1970 / Saudi UTM Zone 37N (السعودية - الغربية)",
+    nameAr: "Ain el Abd 1970 / Saudi UTM Zone 37N (السعودية - الغربية التاريخي)",
     nameEn: "Ain el Abd 1970 / Saudi UTM Zone 37N",
     epsg: "20437",
     type: CRSType.PROJECTED,
@@ -645,11 +864,14 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Saudi Arabia",
     isLocal: true,
     ellipsoid: ELLIPSOID_INTERNATIONAL1924,
-    projection: { type: "TM", cm: 39.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 39.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=37 +ellps=intl +towgs84=-143,-236,7,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1107",
+    accuracyMeters: 18.0
   },
   {
     id: "EPSG:20438",
-    nameAr: "Ain el Abd 1970 / Saudi UTM Zone 38N (السعودية - الوسطى)",
+    nameAr: "Ain el Abd 1970 / Saudi UTM Zone 38N (السعودية - الوسطى التاريخي)",
     nameEn: "Ain el Abd 1970 / Saudi UTM Zone 38N",
     epsg: "20438",
     type: CRSType.PROJECTED,
@@ -660,11 +882,14 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Saudi Arabia",
     isLocal: true,
     ellipsoid: ELLIPSOID_INTERNATIONAL1924,
-    projection: { type: "TM", cm: 45.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 45.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=38 +ellps=intl +towgs84=-143,-236,7,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1107",
+    accuracyMeters: 18.0
   },
   {
     id: "EPSG:20439",
-    nameAr: "Ain el Abd 1970 / Saudi UTM Zone 39N (السعودية - الشرقية)",
+    nameAr: "Ain el Abd 1970 / Saudi UTM Zone 39N (السعودية - الشرقية التاريخي)",
     nameEn: "Ain el Abd 1970 / Saudi UTM Zone 39N",
     epsg: "20439",
     type: CRSType.PROJECTED,
@@ -675,44 +900,18 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Saudi Arabia",
     isLocal: true,
     ellipsoid: ELLIPSOID_INTERNATIONAL1924,
-    projection: { type: "TM", cm: 51.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
-  },
-  {
-    id: "EPSG:9237",
-    nameAr: "KSA-GRF17 / Saudi National Grid Zone 37N (النظام الحديث SANSER)",
-    nameEn: "KSA-GRF17 / Saudi Grid Zone 37N",
-    epsg: "9237",
-    type: CRSType.PROJECTED,
-    datum: DatumType.KSA_GRF17,
-    category: "ARAB_REGIONAL",
-    countryCode: "KSA",
-    countryNameAr: "المملكة العربية السعودية",
-    countryNameEn: "Saudi Arabia",
-    isLocal: true,
-    ellipsoid: ELLIPSOID_GRS80,
-    projection: { type: "TM", cm: 39.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
-  },
-  {
-    id: "EPSG:9238",
-    nameAr: "KSA-GRF17 / Saudi National Grid Zone 38N (النظام الحديث SANSER)",
-    nameEn: "KSA-GRF17 / Saudi Grid Zone 38N",
-    epsg: "9238",
-    type: CRSType.PROJECTED,
-    datum: DatumType.KSA_GRF17,
-    category: "ARAB_REGIONAL",
-    countryCode: "KSA",
-    countryNameAr: "المملكة العربية السعودية",
-    countryNameEn: "Saudi Arabia",
-    isLocal: true,
-    ellipsoid: ELLIPSOID_GRS80,
-    projection: { type: "TM", cm: 45.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 51.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=39 +ellps=intl +towgs84=-143,-236,7,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1107",
+    accuracyMeters: 18.0
   },
 
-  // UAE (الإمارات)
+  // UAE (الإمارات العربية المتحدة)
   {
-    id: "CUSTOM:UAE_DLTM",
-    nameAr: "Dubai Transverse Mercator / DLTM (الإمارات / دبي)",
-    nameEn: "Dubai Transverse Mercator / DLTM",
+    id: "EPSG:3997",
+    nameAr: "Dubai Local Transverse Mercator / DLTM (إمارة دبي)",
+    nameEn: "Dubai Local Transverse Mercator / DLTM (Dubai)",
+    epsg: "3997",
     type: CRSType.PROJECTED,
     datum: DatumType.WGS84,
     category: "ARAB_REGIONAL",
@@ -721,13 +920,15 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "UAE",
     isLocal: true,
     ellipsoid: ELLIPSOID_WGS84,
-    projection: { type: "TM", cm: 55.333333333, scaleFactor: 0.99999, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 55.33333333333333, scaleFactor: 1.0, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=tmerc +lat_0=0 +lon_0=55.33333333333333 +k=1 +x_0=500000 +y_0=0 +ellps=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.05
   },
   {
-    id: "EPSG:29100",
-    nameAr: "Nahrawan 1967 / UTM Zone 39N (الإمارات أبوظبي)",
-    nameEn: "Nahrawan 1967 / UTM Zone 39N (Abu Dhabi)",
-    epsg: "29100",
+    id: "EPSG:27039",
+    nameAr: "Nahrwan 1967 / UTM Zone 39N (الإمارات - أبوظبي والمنطقة الغربية)",
+    nameEn: "Nahrwan 1967 / UTM Zone 39N (Abu Dhabi)",
+    epsg: "27039",
     type: CRSType.PROJECTED,
     datum: DatumType.NAHRAWAN1967,
     category: "ARAB_REGIONAL",
@@ -736,13 +937,16 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "UAE",
     isLocal: true,
     ellipsoid: ELLIPSOID_CLARK1880,
-    projection: { type: "TM", cm: 51.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 51.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=39 +ellps=clrk80 +towgs84=-249,-156,-381,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1578",
+    accuracyMeters: 15.0
   },
   {
-    id: "EPSG:29120",
-    nameAr: "Nahrawan 1967 / UTM Zone 40N (الإمارات دبي والشارقة والجبال)",
-    nameEn: "Nahrawan 1967 / UTM Zone 40N (Northern Emirates)",
-    epsg: "29120",
+    id: "EPSG:27040",
+    nameAr: "Nahrwan 1967 / UTM Zone 40N (الإمارات - دبي، الشارقة والإمارات الشمالية)",
+    nameEn: "Nahrwan 1967 / UTM Zone 40N (Northern Emirates)",
+    epsg: "27040",
     type: CRSType.PROJECTED,
     datum: DatumType.NAHRAWAN1967,
     category: "ARAB_REGIONAL",
@@ -751,15 +955,18 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "UAE",
     isLocal: true,
     ellipsoid: ELLIPSOID_CLARK1880,
-    projection: { type: "TM", cm: 57.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 57.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=40 +ellps=clrk80 +towgs84=-249,-156,-381,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1578",
+    accuracyMeters: 15.0
   },
 
-  // QATAR (قطر)
+  // QATAR (دولة قطر)
   {
-    id: "EPSG:28600",
-    nameAr: "Qatar National Grid / QNG 1995 (شبكة قطر الوطنية)",
-    nameEn: "Qatar National Grid / QNG 1995",
-    epsg: "28600",
+    id: "EPSG:2932",
+    nameAr: "QND95 / Qatar National Grid - QNG95 (شبكة قطر الوطنية الحديثة)",
+    nameEn: "QND95 / Qatar National Grid (QNG95)",
+    epsg: "2932",
     type: CRSType.PROJECTED,
     datum: DatumType.QND95,
     category: "ARAB_REGIONAL",
@@ -768,14 +975,35 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Qatar",
     isLocal: true,
     ellipsoid: ELLIPSOID_INTERNATIONAL1924,
-    projection: { type: "TM", cm: 51.216666666, scaleFactor: 0.99999, falseEasting: 200000.0, falseNorthing: 300000.0, latOrigin: 24.45 }
+    projection: { type: "CASSINI", cm: 51.2166666666667, scaleFactor: 1.0, falseEasting: 200000.0, falseNorthing: 300000.0, latOrigin: 24.45 },
+    proj4String: "+proj=cass +lat_0=24.45 +lon_0=51.2166666666667 +x_0=200000 +y_0=300000 +ellps=intl +towgs84=-119.425,-303.909,-11.445,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1951",
+    accuracyMeters: 1.0
+  },
+  {
+    id: "EPSG:28600",
+    nameAr: "Qatar 1948 / Qatar National Grid (شبكة قطر القديمة 1948)",
+    nameEn: "Qatar 1948 / Qatar National Grid",
+    epsg: "28600",
+    type: CRSType.PROJECTED,
+    datum: DatumType.QATAR1948,
+    category: "ARAB_REGIONAL",
+    countryCode: "QAT",
+    countryNameAr: "قطر",
+    countryNameEn: "Qatar",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_HELMERT1906,
+    projection: { type: "CASSINI", cm: 51.2166666666667, scaleFactor: 1.0, falseEasting: 200000.0, falseNorthing: 300000.0, latOrigin: 24.45 },
+    proj4String: "+proj=cass +lat_0=24.45 +lon_0=51.2166666666667 +x_0=200000 +y_0=300000 +a=6378200 +rf=298.3 +towgs84=-128,-283,-22,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1777",
+    accuracyMeters: 5.0
   },
 
-  // KUWAIT (الكويت)
+  // KUWAIT (دولة الكويت)
   {
     id: "EPSG:3889",
-    nameAr: "Kuwait Utility Grid / KTM (الشبكة القومية للكويت)",
-    nameEn: "Kuwait Utility Grid / KTM",
+    nameAr: "KGD93 / Kuwait Utility Grid - KTM (شبكة المرافق الكويتية الحديثة)",
+    nameEn: "KGD93 / Kuwait Utility Grid (KTM)",
     epsg: "3889",
     type: CRSType.PROJECTED,
     datum: DatumType.KGD93,
@@ -785,15 +1013,35 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Kuwait",
     isLocal: true,
     ellipsoid: ELLIPSOID_GRS80,
-    projection: { type: "TM", cm: 48.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 48.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=tmerc +lat_0=0 +lon_0=48 +k=0.9996 +x_0=500000 +y_0=0 +ellps=GRS80 +units=m +no_defs",
+    accuracyMeters: 0.05
+  },
+  {
+    id: "EPSG:28800",
+    nameAr: "Kuwait PWD / British Grid (شبكة الأشغال العامة القديمة)",
+    nameEn: "Kuwait PWD / Kuwait British Grid",
+    epsg: "28800",
+    type: CRSType.PROJECTED,
+    datum: DatumType.AIN_EL_ABD1970,
+    category: "ARAB_REGIONAL",
+    countryCode: "KWT",
+    countryNameAr: "الكويت",
+    countryNameEn: "Kuwait",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_INTERNATIONAL1924,
+    projection: { type: "TM", cm: 48.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=tmerc +lat_0=0 +lon_0=48 +k=0.9996 +x_0=500000 +y_0=0 +ellps=intl +towgs84=-143,-236,7,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1107",
+    accuracyMeters: 18.0
   },
 
-  // OMAN (عمان)
+  // OMAN (سلطنة عمان)
   {
-    id: "EPSG:3406",
-    nameAr: "Oman National Grid / ON-TM (الشبكة القومية العُمانية)",
-    nameEn: "Oman National Grid / ON-TM",
-    epsg: "3406",
+    id: "EPSG:3440",
+    nameAr: "PSD93 / Oman National Grid - ON-TM (الشبكة القومية العُمانية)",
+    nameEn: "PSD93 / Oman National Grid (ON-TM)",
+    epsg: "3440",
     type: CRSType.PROJECTED,
     datum: DatumType.FAHUD,
     category: "ARAB_REGIONAL",
@@ -802,14 +1050,17 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Oman",
     isLocal: true,
     ellipsoid: ELLIPSOID_CLARK1880,
-    projection: { type: "TM", cm: 57.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 57.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=tmerc +lat_0=0 +lon_0=57 +k=0.9996 +x_0=500000 +y_0=0 +ellps=clrk80 +towgs84=-346,-1,224,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1603",
+    accuracyMeters: 10.0
   },
 
-  // BAHRAIN (البحرين)
+  // BAHRAIN (مملكة البحرين)
   {
     id: "EPSG:25882",
-    nameAr: "Ain el Abd 1970 / Bahrain Grid (شبكة مملكة البحرين)",
-    nameEn: "Ain el Abd 1970 / Bahrain Grid",
+    nameAr: "Ain el Abd 1970 / Bahrain State Grid (شبكة مملكة البحرين)",
+    nameEn: "Ain el Abd 1970 / Bahrain State Grid",
     epsg: "25882",
     type: CRSType.PROJECTED,
     datum: DatumType.AIN_EL_ABD1970,
@@ -819,14 +1070,17 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Bahrain",
     isLocal: true,
     ellipsoid: ELLIPSOID_INTERNATIONAL1924,
-    projection: { type: "TM", cm: 50.55, scaleFactor: 1.0, falseEasting: 200000.0, falseNorthing: 200000.0, latOrigin: 26.0 }
+    projection: { type: "TM", cm: 50.55, scaleFactor: 1.0, falseEasting: 200000.0, falseNorthing: 200000.0, latOrigin: 26.0 },
+    proj4String: "+proj=tmerc +lat_0=26 +lon_0=50.55 +k=1 +x_0=200000 +y_0=200000 +ellps=intl +towgs84=-143,-236,7,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1107",
+    accuracyMeters: 18.0
   },
 
   // PALESTINE & JORDAN (فلسطين والأردن)
   {
     id: "EPSG:28191",
-    nameAr: "Palestine 1923 / Palestine Grid (شبكة فلسطين الوطنية)",
-    nameEn: "Palestine 1923 / Palestine Grid",
+    nameAr: "Palestine 1923 / Palestine Grid - Cassini (شبكة فلسطين الوطنية)",
+    nameEn: "Palestine 1923 / Palestine Grid (Cassini)",
     epsg: "28191",
     type: CRSType.PROJECTED,
     datum: DatumType.PALESTINE1923,
@@ -836,13 +1090,16 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Palestine",
     isLocal: true,
     ellipsoid: ELLIPSOID_CLARK1880,
-    projection: { type: "TM", cm: 35.212080555, scaleFactor: 1.0, falseEasting: 170000.0, falseNorthing: 1126863.0, latOrigin: 31.734096944 }
+    projection: { type: "CASSINI", cm: 35.2120805555556, scaleFactor: 1.0, falseEasting: 170000.0, falseNorthing: 1126863.0, latOrigin: 31.7340969444444 },
+    proj4String: "+proj=cass +lat_0=31.7340969444444 +lon_0=35.2120805555556 +x_0=170000 +y_0=1126863 +ellps=clrk80 +towgs84=-275.722,-94.782,340.894,-8.001,-4.42,-11.821,1 +units=m +no_defs",
+    operationId: "EPSG:1174",
+    accuracyMeters: 2.0
   },
   {
-    id: "EPSG:3140",
-    nameAr: "Jordan Transverse Mercator / JTM (شبكة المملكة الأردنية)",
+    id: "EPSG:28193",
+    nameAr: "Jordan Transverse Mercator / JTM (شبكة المملكة الأردنية الهاشمية)",
     nameEn: "Jordan Transverse Mercator / JTM",
-    epsg: "3140",
+    epsg: "28193",
     type: CRSType.PROJECTED,
     datum: DatumType.ED50,
     category: "ARAB_REGIONAL",
@@ -851,15 +1108,18 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Jordan",
     isLocal: true,
     ellipsoid: ELLIPSOID_INTERNATIONAL1924,
-    projection: { type: "TM", cm: 37.0, scaleFactor: 0.9998, falseEasting: 500000.0, falseNorthing: 3000000.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 37.0, scaleFactor: 0.9998, falseEasting: 500000.0, falseNorthing: 3000000.0, latOrigin: 0.0 },
+    proj4String: "+proj=tmerc +lat_0=0 +lon_0=37 +k=0.9998 +x_0=500000 +y_0=3000000 +ellps=intl +towgs84=-87,-98,-121,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1618",
+    accuracyMeters: 10.0
   },
 
-  // IRAQ (العراق)
+  // IRAQ (جمهورية العراق)
   {
-    id: "EPSG:29037",
-    nameAr: "Nahrwan 1967 / Iraq UTM Zone 37N (العراق - الغربية)",
+    id: "EPSG:3891",
+    nameAr: "Nahrwan 1967 / Iraq UTM Zone 37N (العراق - الأنبار والمنطقة الغربية)",
     nameEn: "Nahrwan 1967 / Iraq UTM Zone 37N",
-    epsg: "29037",
+    epsg: "3891",
     type: CRSType.PROJECTED,
     datum: DatumType.NAHRAWAN1967,
     category: "ARAB_REGIONAL",
@@ -868,13 +1128,16 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Iraq",
     isLocal: true,
     ellipsoid: ELLIPSOID_CLARK1880,
-    projection: { type: "TM", cm: 39.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 39.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=37 +ellps=clrk80 +towgs84=-249,-156,-381,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1578",
+    accuracyMeters: 15.0
   },
   {
-    id: "EPSG:29038",
-    nameAr: "Nahrwan 1967 / Iraq UTM Zone 38N (العراق - بغداد والوسط)",
+    id: "EPSG:3892",
+    nameAr: "Nahrwan 1967 / Iraq UTM Zone 38N (العراق - بغداد والوسط والجنوب)",
     nameEn: "Nahrwan 1967 / Iraq UTM Zone 38N",
-    epsg: "29038",
+    epsg: "3892",
     type: CRSType.PROJECTED,
     datum: DatumType.NAHRAWAN1967,
     category: "ARAB_REGIONAL",
@@ -883,14 +1146,35 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Iraq",
     isLocal: true,
     ellipsoid: ELLIPSOID_CLARK1880,
-    projection: { type: "TM", cm: 45.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 45.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=38 +ellps=clrk80 +towgs84=-249,-156,-381,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1578",
+    accuracyMeters: 15.0
   },
 
   // SYRIA & LEBANON (سوريا ولبنان)
   {
+    id: "EPSG:22770",
+    nameAr: "Deir ez Zor / Syria Lambert (الجمهورية العربية السورية - لامبرت)",
+    nameEn: "Deir ez Zor / Syria Lambert (LCC)",
+    epsg: "22770",
+    type: CRSType.PROJECTED,
+    datum: DatumType.DEIR_EZ_ZOR,
+    category: "ARAB_REGIONAL",
+    countryCode: "SYR",
+    countryNameAr: "سوريا",
+    countryNameEn: "Syria",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_CLARK1880,
+    projection: { type: "LCC", cm: 37.35, scaleFactor: 0.999625769, falseEasting: 300000.0, falseNorthing: 300000.0, latOrigin: 34.65 },
+    proj4String: "+proj=lcc +lat_1=34.65 +lat_0=34.65 +lon_0=37.35 +k_0=0.999625769 +x_0=300000 +y_0=300000 +ellps=clrk80 +towgs84=-308.7,-19,277.6,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1127",
+    accuracyMeters: 10.0
+  },
+  {
     id: "EPSG:22700",
-    nameAr: "Deir ez Zor / Levant Zone 36N (الجمهورية العربية السورية)",
-    nameEn: "Deir ez Zor / Levant Zone 36N (Syria)",
+    nameAr: "Deir ez Zor / Levant Zone (لبنان والساحل الشامي)",
+    nameEn: "Deir ez Zor / Levant Zone (Lebanon & Levant)",
     epsg: "22700",
     type: CRSType.PROJECTED,
     datum: DatumType.DEIR_EZ_ZOR,
@@ -899,15 +1183,18 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "سوريا",
     countryNameEn: "Syria",
     isLocal: true,
-    ellipsoid: ELLIPSOID_INTERNATIONAL1924,
-    projection: { type: "TM", cm: 36.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    ellipsoid: ELLIPSOID_CLARK1880,
+    projection: { type: "LCC", cm: 35.84, scaleFactor: 0.99953484, falseEasting: 200000.0, falseNorthing: 150000.0, latOrigin: 34.3916666666667 },
+    proj4String: "+proj=lcc +lat_1=34.3916666666667 +lat_0=34.3916666666667 +lon_0=35.84 +k_0=0.99953484 +x_0=200000 +y_0=150000 +ellps=clrk80 +towgs84=-308.7,-19,277.6,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1127",
+    accuracyMeters: 10.0
   },
 
-  // SUDAN (السودان)
+  // SUDAN (جمهورية السودان)
   {
     id: "EPSG:20135",
     nameAr: "Adindan / Sudan UTM Zone 35N (السودان - الخرطوم والوسط)",
-    nameEn: "Adindan / Sudan UTM Zone 35N",
+    nameEn: "Adindan / Sudan UTM Zone 35N (Khartoum)",
     epsg: "20135",
     type: CRSType.PROJECTED,
     datum: DatumType.ADINDAN,
@@ -917,12 +1204,15 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Sudan",
     isLocal: true,
     ellipsoid: ELLIPSOID_CLARK1880,
-    projection: { type: "TM", cm: 27.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 27.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=35 +ellps=clrk80 +towgs84=-166,-15,204,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1102",
+    accuracyMeters: 12.0
   },
   {
     id: "EPSG:20136",
-    nameAr: "Adindan / Sudan UTM Zone 36N (السودان - الشرق والبحر الأحمر)",
-    nameEn: "Adindan / Sudan UTM Zone 36N",
+    nameAr: "Adindan / Sudan UTM Zone 36N (السودان - بورتسودان والشرق)",
+    nameEn: "Adindan / Sudan UTM Zone 36N (Port Sudan)",
     epsg: "20136",
     type: CRSType.PROJECTED,
     datum: DatumType.ADINDAN,
@@ -932,14 +1222,17 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Sudan",
     isLocal: true,
     ellipsoid: ELLIPSOID_CLARK1880,
-    projection: { type: "TM", cm: 33.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 33.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=36 +ellps=clrk80 +towgs84=-166,-15,204,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1102",
+    accuracyMeters: 12.0
   },
 
-  // MOROCCO (المغرب)
+  // MOROCCO (المملكة المغربية)
   {
     id: "EPSG:26191",
-    nameAr: "Merchich / Nord Maroc Lambert Zone 1 (المملكة المغربية)",
-    nameEn: "Merchich / Nord Maroc Lambert Zone 1",
+    nameAr: "Merchich / Nord Maroc Lambert Zone 1 (المملكة المغربية - شمال)",
+    nameEn: "Merchich / Nord Maroc Lambert Zone 1 (North)",
     epsg: "26191",
     type: CRSType.PROJECTED,
     datum: DatumType.MERCHICH,
@@ -949,39 +1242,162 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Morocco",
     isLocal: true,
     ellipsoid: ELLIPSOID_CLARK1880,
-    projection: { type: "TM", cm: -5.4, scaleFactor: 0.9996156, falseEasting: 500000.0, falseNorthing: 300000.0, latOrigin: 33.3 }
+    projection: { type: "LCC", cm: -5.4, scaleFactor: 0.999615596, falseEasting: 500000.0, falseNorthing: 300000.0, latOrigin: 33.3 },
+    proj4String: "+proj=lcc +lat_1=33.3 +lat_0=33.3 +lon_0=-5.4 +k_0=0.999615596 +x_0=500000 +y_0=300000 +ellps=clrk80ign +towgs84=-31,146,47,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1159",
+    accuracyMeters: 8.0
+  },
+  {
+    id: "EPSG:26192",
+    nameAr: "Merchich / Sud Maroc Lambert Zone 2 (المملكة المغربية - جنوب)",
+    nameEn: "Merchich / Sud Maroc Lambert Zone 2 (South)",
+    epsg: "26192",
+    type: CRSType.PROJECTED,
+    datum: DatumType.MERCHICH,
+    category: "ARAB_REGIONAL",
+    countryCode: "MAR",
+    countryNameAr: "المغرب",
+    countryNameEn: "Morocco",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_CLARK1880,
+    projection: { type: "LCC", cm: -5.4, scaleFactor: 0.999615596, falseEasting: 500000.0, falseNorthing: 300000.0, latOrigin: 29.7 },
+    proj4String: "+proj=lcc +lat_1=29.7 +lat_0=29.7 +lon_0=-5.4 +k_0=0.999615596 +x_0=500000 +y_0=300000 +ellps=clrk80ign +towgs84=-31,146,47,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1159",
+    accuracyMeters: 8.0
   },
 
-  // MAURITANIA (موريتانيا)
+  // TUNISIA (الجمهورية التونسية)
   {
-    id: "EPSG:32628_MRT",
-    nameAr: "Mauritania / UTM Zone 28N (موريتانيا - نواكشوط والغرب)",
-    nameEn: "Mauritania / UTM Zone 28N",
-    epsg: "32628",
+    id: "EPSG:22391",
+    nameAr: "Carthage / Nord Tunisie Lambert Zone 1 (تونس - شمال)",
+    nameEn: "Carthage / Nord Tunisie Lambert Zone 1",
+    epsg: "22391",
     type: CRSType.PROJECTED,
-    datum: DatumType.WGS84,
+    datum: DatumType.CARTHAGE,
     category: "ARAB_REGIONAL",
-    countryCode: "MRT",
-    countryNameAr: "موريتانيا",
-    countryNameEn: "Mauritania",
+    countryCode: "TUN",
+    countryNameAr: "تونس",
+    countryNameEn: "Tunisia",
     isLocal: true,
-    ellipsoid: ELLIPSOID_WGS84,
-    projection: { type: "TM", cm: -15.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    ellipsoid: ELLIPSOID_CLARK1880,
+    projection: { type: "LCC", cm: 10.125, scaleFactor: 0.999625544, falseEasting: 500000.0, falseNorthing: 300000.0, latOrigin: 36.0 },
+    proj4String: "+proj=lcc +lat_1=36 +lat_0=36 +lon_0=10.125 +k_0=0.999625544 +x_0=500000 +y_0=300000 +ellps=clrk80ign +towgs84=-263,6,431,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1123",
+    accuracyMeters: 5.0
   },
   {
-    id: "EPSG:32629_MRT",
-    nameAr: "Mauritania / UTM Zone 29N (موريتانيا - النعمة والشرق)",
-    nameEn: "Mauritania / UTM Zone 29N",
-    epsg: "32629",
+    id: "EPSG:22392",
+    nameAr: "Carthage / Sud Tunisie Lambert Zone 2 (تونس - جنوب)",
+    nameEn: "Carthage / Sud Tunisie Lambert Zone 2",
+    epsg: "22392",
     type: CRSType.PROJECTED,
-    datum: DatumType.WGS84,
+    datum: DatumType.CARTHAGE,
+    category: "ARAB_REGIONAL",
+    countryCode: "TUN",
+    countryNameAr: "تونس",
+    countryNameEn: "Tunisia",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_CLARK1880,
+    projection: { type: "LCC", cm: 10.125, scaleFactor: 0.999625544, falseEasting: 500000.0, falseNorthing: 300000.0, latOrigin: 33.3 },
+    proj4String: "+proj=lcc +lat_1=33.3 +lat_0=33.3 +lon_0=10.125 +k_0=0.999625544 +x_0=500000 +y_0=300000 +ellps=clrk80ign +towgs84=-263,6,431,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1123",
+    accuracyMeters: 5.0
+  },
+
+  // ALGERIA (الجمهورية الجزائرية)
+  {
+    id: "EPSG:22301",
+    nameAr: "Voirol 1875 / Nord Algérie Lambert (الجزائر - شمال)",
+    nameEn: "Voirol 1875 / Nord Algérie Lambert",
+    epsg: "22301",
+    type: CRSType.PROJECTED,
+    datum: DatumType.VOIROL1875,
+    category: "ARAB_REGIONAL",
+    countryCode: "DZA",
+    countryNameAr: "الجزائر",
+    countryNameEn: "Algeria",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_CLARK1880,
+    projection: { type: "LCC", cm: 2.7, scaleFactor: 0.999625544, falseEasting: 500000.0, falseNorthing: 300000.0, latOrigin: 36.0 },
+    proj4String: "+proj=lcc +lat_1=36 +lat_0=36 +lon_0=2.7 +k_0=0.999625544 +x_0=500000 +y_0=300000 +ellps=clrk80ign +towgs84=-73,-247,227,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1133",
+    accuracyMeters: 10.0
+  },
+  {
+    id: "EPSG:30731",
+    nameAr: "Nord Sahara 1959 / UTM Zone 31N (الجزائر - الصحراء)",
+    nameEn: "Nord Sahara 1959 / UTM Zone 31N",
+    epsg: "30731",
+    type: CRSType.PROJECTED,
+    datum: DatumType.NORD_SAHARA,
+    category: "ARAB_REGIONAL",
+    countryCode: "DZA",
+    countryNameAr: "الجزائر",
+    countryNameEn: "Algeria",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_CLARK1880,
+    projection: { type: "TM", cm: 3.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=31 +ellps=clrk80ign +towgs84=-186,-252,-281,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1134",
+    accuracyMeters: 8.0
+  },
+
+  // LIBYA (دولة ليبيا)
+  {
+    id: "EPSG:2085",
+    nameAr: "ED50 / Libya Zone 6 (ليبيا - طرابلس والساحل الغربي)",
+    nameEn: "ED50 / Libya Zone 6 (Tripoli & West)",
+    epsg: "2085",
+    type: CRSType.PROJECTED,
+    datum: DatumType.ED50,
+    category: "ARAB_REGIONAL",
+    countryCode: "LBY",
+    countryNameAr: "ليبيا",
+    countryNameEn: "Libya",
+    isLocal: true,
+    ellipsoid: ELLIPSOID_INTERNATIONAL1924,
+    projection: { type: "TM", cm: 15.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=33 +ellps=intl +towgs84=-87,-98,-121,0,0,0,0 +units=m +no_defs",
+    operationId: "EPSG:1618",
+    accuracyMeters: 10.0
+  },
+
+  // MAURITANIA (الجمهورية الإسلامية الموريتانية)
+  {
+    id: "EPSG:24313",
+    nameAr: "Mauritania 1999 / UTM Zone 28N (موريتانيا - نواكشوط والغرب)",
+    nameEn: "Mauritania 1999 / UTM Zone 28N",
+    epsg: "24313",
+    type: CRSType.PROJECTED,
+    datum: DatumType.MAURITANIA1999,
     category: "ARAB_REGIONAL",
     countryCode: "MRT",
     countryNameAr: "موريتانيا",
     countryNameEn: "Mauritania",
     isLocal: true,
+    ellipsoid: ELLIPSOID_GRS80,
+    projection: { type: "TM", cm: -15.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=28 +ellps=GRS80 +units=m +no_defs",
+    accuracyMeters: 0.05
+  },
+
+  // YEMEN (الجمهورية اليمنية)
+  {
+    id: "EPSG:2091",
+    nameAr: "Yemen NGN96 / UTM Zone 38N (الجمهورية اليمنية - صنعاء وعدن والوسط)",
+    nameEn: "Yemen NGN96 / UTM Zone 38N",
+    epsg: "2091",
+    type: CRSType.PROJECTED,
+    datum: DatumType.YEMEN_NGN96,
+    category: "ARAB_REGIONAL",
+    countryCode: "YEM",
+    countryNameAr: "اليمن",
+    countryNameEn: "Yemen",
+    isLocal: true,
     ellipsoid: ELLIPSOID_WGS84,
-    projection: { type: "TM", cm: -9.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 45.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=38 +ellps=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.05
   },
 
   // SOMALIA (الصومال)
@@ -998,7 +1414,9 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Somalia",
     isLocal: true,
     ellipsoid: ELLIPSOID_WGS84,
-    projection: { type: "TM", cm: 45.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 45.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=38 +datum=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.0
   },
   {
     id: "EPSG:32639_SOM",
@@ -1013,7 +1431,9 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Somalia",
     isLocal: true,
     ellipsoid: ELLIPSOID_WGS84,
-    projection: { type: "TM", cm: 51.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 51.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=39 +datum=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.0
   },
 
   // DJIBOUTI (جيبوتي)
@@ -1029,8 +1449,10 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "جيبوتي",
     countryNameEn: "Djibouti",
     isLocal: true,
-    ellipsoid: ELLIPSOID_CLARK1880,
-    projection: { type: "TM", cm: 45.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    ellipsoid: ELLIPSOID_WGS84,
+    projection: { type: "TM", cm: 45.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=38 +datum=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.0
   },
 
   // COMOROS (جزر القمر)
@@ -1046,8 +1468,10 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameAr: "جزر القمر",
     countryNameEn: "Comoros",
     isLocal: true,
-    ellipsoid: ELLIPSOID_INTERNATIONAL1924,
-    projection: { type: "TM", cm: 45.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 10000000.0, latOrigin: 0.0 }
+    ellipsoid: ELLIPSOID_WGS84,
+    projection: { type: "TM", cm: 45.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 10000000.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=38 +south +datum=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.0
   },
 
   // EGYPT WGS84 UTM ZONES (35N, 36N, 37N)
@@ -1064,7 +1488,9 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Egypt",
     isLocal: true,
     ellipsoid: ELLIPSOID_WGS84,
-    projection: { type: "TM", cm: 27.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 27.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=35 +datum=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.0
   },
   {
     id: "EPSG:32636_EGY",
@@ -1079,7 +1505,9 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Egypt",
     isLocal: true,
     ellipsoid: ELLIPSOID_WGS84,
-    projection: { type: "TM", cm: 33.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 33.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=36 +datum=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.0
   },
   {
     id: "EPSG:32637_EGY",
@@ -1094,7 +1522,9 @@ const ARAB_REGIONAL_SYSTEMS: CRSDefinition[] = [
     countryNameEn: "Egypt",
     isLocal: true,
     ellipsoid: ELLIPSOID_WGS84,
-    projection: { type: "TM", cm: 39.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 }
+    projection: { type: "TM", cm: 39.0, scaleFactor: 0.9996, falseEasting: 500000.0, falseNorthing: 0.0, latOrigin: 0.0 },
+    proj4String: "+proj=utm +zone=37 +datum=WGS84 +units=m +no_defs",
+    accuracyMeters: 0.0
   }
 ];
 
@@ -1161,7 +1591,9 @@ const UTM_NORTH_ZONES: CRSDefinition[] = Array.from({ length: 60 }, (_, i) => {
       falseEasting: 500000.0,
       falseNorthing: 0.0,
       latOrigin: 0.0
-    }
+    },
+    proj4String: `+proj=utm +zone=${zone} +datum=WGS84 +units=m +no_defs`,
+    accuracyMeters: 0.0
   };
 });
 
@@ -1190,7 +1622,9 @@ const UTM_SOUTH_ZONES: CRSDefinition[] = Array.from({ length: 60 }, (_, i) => {
       falseEasting: 500000.0,
       falseNorthing: 10000000.0,
       latOrigin: 0.0
-    }
+    },
+    proj4String: `+proj=utm +zone=${zone} +south +datum=WGS84 +units=m +no_defs`,
+    accuracyMeters: 0.0
   };
 });
 
@@ -1216,7 +1650,9 @@ const WEB_PROJECTIONS: CRSDefinition[] = [
       falseEasting: 0.0,
       falseNorthing: 0.0,
       latOrigin: 0.0
-    }
+    },
+    proj4String: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0 +lon_0=0 +x_0=0 +y_0=0 +k=1 +units=m +nadgrids=@null +wktext +no_defs",
+    accuracyMeters: 0.0
   }
 ];
 
@@ -1273,7 +1709,9 @@ export function getUTMCRSForLon(lon: number, lat: number = 30): CRSDefinition {
       falseEasting: 500000.0,
       falseNorthing: isSouth ? 10000000.0 : 0.0,
       latOrigin: 0.0
-    }
+    },
+    proj4String: `+proj=utm +zone=${zone} ${isSouth ? "+south " : ""}+datum=WGS84 +units=m +no_defs`,
+    accuracyMeters: 0.0
   };
 }
 

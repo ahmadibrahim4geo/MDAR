@@ -966,7 +966,7 @@ export default function BatchTab({
               <option value="EPSG:22992">ETM Red Belt - الحزام الأحمر المصرية (EPSG:22992)</option>
               <option value="EPSG:22993">ETM Purple Belt - الحزام البنفسجي (EPSG:22993)</option>
               <option value="EPSG:22994">ETM Extended Purple Belt - البنفسجي الممتد (EPSG:22994)</option>
-              <option value="EPSG:22995">ETM Blue Belt - الحزام الأزرق (EPSG:22995)</option>
+              <option value="EPSG:22991">ETM Blue Belt - الحزام الأزرق (EPSG:22991)</option>
             </select>
           </div>
         )}
