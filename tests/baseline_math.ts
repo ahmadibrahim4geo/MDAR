@@ -1,5 +1,5 @@
 /**
- * Baseline Mathematical Verification Test for MِDAR
+ * Baseline Mathematical Verification Test for MDAR
  * Evaluates geodetic projection algorithms, roundtrip consistency, and residuals against PROJ benchmarks.
  */
 
@@ -37,7 +37,7 @@ interface TestReport {
 
 const report: TestReport = {
   timestamp: new Date().toISOString(),
-  testSuite: "MِDAR Baseline Mathematical Verification (T1 Evidence)",
+  testSuite: "MDAR Baseline Mathematical Verification (T1 Evidence)",
   totalTests: 0,
   passed: 0,
   failed: 0,

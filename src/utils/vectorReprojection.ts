@@ -1,5 +1,5 @@
 /**
- * مدار – MِDAR | GIS Vector Reprojection Engine
+ * مدار – MDAR | GIS Vector Reprojection Engine
  * High-performance client-side reprojection for GeoJSON, KML/KMZ, and Shapefiles (ZIP).
  * Integrates geometry coordinate transforms, XXE defense, and archive size boundaries.
  */
@@ -328,7 +328,7 @@ export async function parseShapefileZip(buffer: ArrayBuffer): Promise<any> {
 /**
  * Converts a GeoJSON FeatureCollection to clean KML string
  */
-export function featureCollectionToKML(fc: any, title = "مدار – MِDAR Vector Layer"): string {
+export function featureCollectionToKML(fc: any, title = "مدار – MDAR Vector Layer"): string {
   const placemarks: string[] = [];
 
   for (const f of fc.features || []) {

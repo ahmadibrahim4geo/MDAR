@@ -13,7 +13,7 @@ createRoot(document.getElementById('root')!).render(
 if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./sw.js').catch((err) => {
-      console.warn('[MِDAR] Service Worker registration failed:', err);
+      console.warn('[MDAR] Service Worker registration failed:', err);
     });
   });
 }

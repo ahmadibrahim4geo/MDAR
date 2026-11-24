@@ -1,5 +1,5 @@
 /**
- * مدار – MِDAR | Genuine XLSX Export & Spreadsheet Security Engine
+ * مدار – MDAR | Genuine XLSX Export & Spreadsheet Security Engine
  * Generates true Office Open XML (.xlsx) workbooks with formula injection defense,
  * typed numeric cells, and geodetic metadata.
  */
@@ -184,7 +184,7 @@ export async function exportBatchToXLSX(options: ExportXLSXOptions): Promise<voi
   const metadataRows: Row[] = [
     [
       {
-        value: "مدار – MِDAR | Geodetic Transformation Metadata & Provenance",
+        value: "مدار – MDAR | Geodetic Transformation Metadata & Provenance",
         fontWeight: "bold",
         fontSize: 13,
         textColor: "#FFFFFF",

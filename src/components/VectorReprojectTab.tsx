@@ -1,5 +1,5 @@
 /**
- * مدار – MِDAR | GIS Vector File Reprojection Tab
+ * مدار – MDAR | GIS Vector File Reprojection Tab
  * Reprojects Shapefiles (ZIP), GeoJSON, and KML files with high precision and client-side privacy.
  */
 

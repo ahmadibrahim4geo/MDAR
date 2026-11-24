@@ -1,12 +1,12 @@
-# مدار – MِDAR | Agent Governance & Engineering Contract
+# مدار – MDAR | Agent Governance & Engineering Contract
 
 <!-- GIS-Development-Skills:managed-project-governance-v1 -->
 
-> **Project Identity:** **مدار – MِDAR** (Mapping, Datum Adjustment and Reprojection)  
+> **Project Identity:** **مدار – MDAR** (Mapping, Datum Adjustment and Reprojection)  
 > **Official Scope:** Universal Coordinate & Geospatial Transformation Platform  
 > **Brand Nomenclature:**  
 > - Arabic Display: **مدار**  
-> - English Visual: **MِDAR** (Letter `M` followed by Arabic Kasra `U+0650` then `DAR` — Never replace with "MADAR" or "GeoMizan")  
+> - English Visual: **MDAR** (Letter `M` followed by Arabic Kasra `U+0650` then `DAR` — Never replace with "MADAR" or "GeoMizan")  
 > - Technical ASCII: `MDAR` (folders, filenames, headers) / `mdar` (packages, URLs)  
 > - Acronym Definition: **Mapping, Datum Adjustment and Reprojection**
 

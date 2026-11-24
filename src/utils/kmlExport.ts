@@ -63,7 +63,7 @@ export function generateKMLContent(
               </tr>
             </table>
             <div style="margin-top: 8px; font-size: 11px; color: #64748b; text-align: center;">
-              ${isAr ? "تم التحويل والمعالجة بواسطة منصة مدار – MِDAR" : "Converted & Processed via مدار – MِDAR Platform"}
+              ${isAr ? "تم التحويل والمعالجة بواسطة منصة مدار – MDAR" : "Converted & Processed via مدار – MDAR Platform"}
             </div>
           </div>
         ]]>
@@ -85,8 +85,8 @@ export function generateKMLContent(
   return `<?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>${isAr ? "مدار – MِDAR | نقاط جيوديسية محولة" : "مدار – MِDAR | Converted Geospatial Points"}</name>
-    <description>${isAr ? "نقاط مساحية وجيوديسية محولة ومعالجة عبر منصة مدار – MِDAR" : "Converted survey and geospatial points processed via مدار – MِDAR Platform"}</description>
+    <name>${isAr ? "مدار – MDAR | نقاط جيوديسية محولة" : "مدار – MDAR | Converted Geospatial Points"}</name>
+    <description>${isAr ? "نقاط مساحية وجيوديسية محولة ومعالجة عبر منصة مدار – MDAR" : "Converted survey and geospatial points processed via مدار – MDAR Platform"}</description>
     
     <Style id="surveyPointStyle">
       <IconStyle>

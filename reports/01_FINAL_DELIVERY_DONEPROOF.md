@@ -1,9 +1,9 @@
 # تقرير الاعتماد النهائي ونظام إثبات الإنجاز (DoneProof Final Delivery Report)
-# مدار – MِDAR | Mapping, Datum Adjustment and Reprojection Platform
+# مدار – MDAR | Mapping, Datum Adjustment and Reprojection Platform
 
 <!-- GIS-Development-Skills:managed-project-governance-v1 -->
 
-> **Project Identity:** **مدار – MِDAR** (Letter `M` followed by Arabic Kasra `U+0650` then `DAR`)  
+> **Project Identity:** **مدار – MDAR** (Letter `M` followed by Arabic Kasra `U+0650` then `DAR`)  
 > **Repository Path:** `D:\My Software\MDAR`  
 > **Release Version:** `v1.0.0-release`  
 > **Master Specification:** `MDAR_MASTER_DEVELOPMENT_PLAN.md`  
@@ -15,7 +15,7 @@
 
 ## 1. Executive Summary & Delivery Scope
 
-تم بحمد الله وتوفيقه إنجاز وتدقيق واعتماد المنصة الهندسية الجيوديسية الشاملة **مدار – MِDAR**، استناداً إلى دورة التطوير الصارمة المحددة في `MDAR_MASTER_DEVELOPMENT_PLAN.md` و`AGENTS.md`. تم تنفيذ المراحل كافة من المرحلة 0 حتى المرحلة 8 دون تخمين رياضي، مع تفعيل حارس الأمان (GIS Security Guardian)، وتوثيق جميع الخطوات في سجل التطوير غير القابل للتعديل (`.agent-development-log/`).
+تم بحمد الله وتوفيقه إنجاز وتدقيق واعتماد المنصة الهندسية الجيوديسية الشاملة **مدار – MDAR**، استناداً إلى دورة التطوير الصارمة المحددة في `MDAR_MASTER_DEVELOPMENT_PLAN.md` و`AGENTS.md`. تم تنفيذ المراحل كافة من المرحلة 0 حتى المرحلة 8 دون تخمين رياضي، مع تفعيل حارس الأمان (GIS Security Guardian)، وتوثيق جميع الخطوات في سجل التطوير غير القابل للتعديل (`.agent-development-log/`).
 
 ---
 
@@ -40,7 +40,7 @@
 ## 3. Major Architectural & Functional Achievements
 
 ### 1. الهوية البصرية والاسمية المعتمدة
-- اعتماد الاسم الرسمي: **مدار** باللغة العربية، و **MِDAR** باللغة الإنجليزية (بحرف M متبوعاً بالكسرة `U+0650` ثم DAR) في كافة واجهات التطبيق ومصنفات الإكسل والتصدير، واستبعاد المسميات غير المعتمدة نهائياً.
+- اعتماد الاسم الرسمي: **مدار** باللغة العربية، و **MDAR** باللغة الإنجليزية (بحرف M متبوعاً بالكسرة `U+0650` ثم DAR) في كافة واجهات التطبيق ومصنفات الإكسل والتصدير، واستبعاد المسميات غير المعتمدة نهائياً.
 
 ### 2. البنية الجيوديسية مزدوجة المحرك (Dual-Engine Geodetic Architecture)
 - **المحرك التحليلي الخالص (Analytical Engine):** حسابات مولودينسكي-باديكاس 10-معاملات المعتمدة من المساحة المصرية لنظام Egypt 1907 وحسابات المسقط المستعرض كروجر-كلنشو بدقة مليمترية.

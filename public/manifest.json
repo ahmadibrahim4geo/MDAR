@@ -1,6 +1,6 @@
 {
-  "name": "مدار – MِDAR | Universal Coordinate Transformation Platform",
-  "short_name": "مدار – MِDAR",
+  "name": "مدار – MDAR | Universal Coordinate Transformation Platform",
+  "short_name": "مدار – MDAR",
   "description": "منصة مدار الشاملة للتحويلات المساحية وضبط المراجع الجيوديسية (Mapping, Datum Adjustment and Reprojection)",
   "start_url": "./index.html",
   "display": "standalone",

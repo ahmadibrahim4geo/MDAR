@@ -1,5 +1,5 @@
 /**
- * مدار – MِDAR | Phase 5 Vector File Reprojection & Security Test Suite
+ * مدار – MDAR | Phase 5 Vector File Reprojection & Security Test Suite
  * Validates GeoJSON, KML parsing, geometry transforms across Point/Line/Polygon,
  * XXE injection defense, and lossless roundtrips.
  */
@@ -21,7 +21,7 @@ import * as path from "path";
 
 function runVectorReprojectionTests() {
   console.log("================================================================================");
-  console.log(" مدار – MِDAR | Vector File Reprojection & Security Verification (T3 DoneProof)");
+  console.log(" مدار – MDAR | Vector File Reprojection & Security Verification (T3 DoneProof)");
   console.log("================================================================================\n");
 
   const srcCRS = getCRSById("EPSG:4326")!; // WGS 84

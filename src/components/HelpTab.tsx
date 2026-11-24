@@ -20,7 +20,7 @@ export default function HelpTab() {
         <div className="flex items-center gap-3">
           <BookOpen className="w-8 h-8 text-emerald-400 shrink-0" />
           <div>
-            <h2 className="text-2xl font-bold font-sans">مدار – MِDAR | الموسوعة الجيوديسية ودليل المساعدة</h2>
+            <h2 className="text-2xl font-bold font-sans">مدار – MDAR | الموسوعة الجيوديسية ودليل المساعدة</h2>
             <p className="text-xs text-emerald-300 font-mono mt-0.5">Mapping, Datum Adjustment and Reprojection Platform</p>
           </div>
         </div>

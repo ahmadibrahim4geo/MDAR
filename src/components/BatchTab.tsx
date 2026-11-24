@@ -3,17 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { CRS_LIST, getUTMCRSForLon, getETMBeltForLonLat, getMTMZoneForLon } from "../lib/crsData";
 import { convertCoordinates } from "../lib/coordinateMath";
 import { parseSingleCoordinate, splitPairedCoordinates } from "../lib/parser";
 import { TranslationDictionary, CRSType, TargetZoneMode, BatchRow, DatumType } from "../types";
-import { Copy, Clipboard, Check, Trash2, FileSpreadsheet, Play, Plus, X, BookOpen, Download, ChevronDown, ChevronUp, Globe } from "lucide-react";
+import { Copy, Clipboard, Check, Trash2, FileSpreadsheet, Play, Plus, X, BookOpen, Download, ChevronDown, ChevronUp, Globe, UploadCloud } from "lucide-react";
 import FormatGuideModal from "./FormatGuideModal";
 import ExportModal from "./ExportModal";
 import MapModal from "./MapModal";
 import CRSSelect from "./CRSSelect";
 import ScopeHelpCard from "./ScopeHelpCard";
+import ColumnMappingWizard from "./ColumnMappingWizard";
+import { smartImportFile, SmartImportResult } from "../utils/smartImport";
+import { DetectedColumn } from "../utils/smartColumnDetection";
 import { downloadKMLFile } from "../utils/kmlExport";
 
 interface BatchTabProps {
@@ -52,6 +55,75 @@ export default function BatchTab({
   const [isGuideOpen, setIsGuideOpen] = useState(false);
   const [isExportModalOpen, setIsExportModalOpen] = useState(false);
   const [isMapModalOpen, setIsMapModalOpen] = useState(false);
+
+  // Smart Import & Column Mapping state
+  const [isWizardOpen, setIsWizardOpen] = useState(false);
+  const [importResult, setImportResult] = useState<SmartImportResult | null>(null);
+  const [importNotification, setImportNotification] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleFileSelect = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    try {
+      setIsProcessing(true);
+      const res = await smartImportFile(file);
+      setImportResult(res);
+      setIsWizardOpen(true);
+    } catch (err: any) {
+      setPasteError(`خطأ في قراءة وفحص الملف: ${err.message}`);
+    } finally {
+      setIsProcessing(false);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    }
+  };
+
+  const handleConfirmMapping = (confirmedColumns: DetectedColumn[], updatedResult: SmartImportResult) => {
+    setIsWizardOpen(false);
+
+    const xCol = confirmedColumns.find((c) => c.suggestedRole === "X");
+    const yCol = confirmedColumns.find((c) => c.suggestedRole === "Y");
+    const zCol = confirmedColumns.find((c) => c.suggestedRole === "Z");
+    const idCol = confirmedColumns.find((c) => c.suggestedRole === "ID");
+    const nameCol = confirmedColumns.find((c) => c.suggestedRole === "NAME");
+
+    if (!xCol || !yCol) return;
+
+    const dataRows = updatedResult.allRows.slice(updatedResult.dataStartRowIndex);
+    const newBatchRows: BatchRow[] = [];
+
+    dataRows.forEach((row, idx) => {
+      const rawX = row[xCol.index]?.trim() || "";
+      const rawY = row[yCol.index]?.trim() || "";
+      const rawZ = zCol ? row[zCol.index]?.trim() : undefined;
+      const rawId = idCol ? row[idCol.index]?.trim() : undefined;
+      const rawName = nameCol ? row[nameCol.index]?.trim() : undefined;
+
+      if (!rawX && !rawY) return;
+
+      const pointId = rawId || (rawName ? rawName : `PT-${(idx + 1).toString().padStart(2, "0")}`);
+
+      newBatchRows.push({
+        id: idx + 1,
+        pointId,
+        input1: rawX,
+        input2: rawY,
+        status: "idle",
+        warnings: []
+      });
+    });
+
+    if (newBatchRows.length > 0) {
+      setRows(newBatchRows);
+      setImportNotification(
+        lang === "ar"
+          ? `تم استيراد ${newBatchRows.length.toLocaleString()} نقطة بنجاح من ملف "${updatedResult.fileName}" مع اعتماد تعيين الأعمدة.`
+          : `Successfully imported ${newBatchRows.length.toLocaleString()} points from "${updatedResult.fileName}" with confirmed column mapping.`
+      );
+      setTimeout(() => setImportNotification(null), 6000);
+    }
+  };
 
   // Drag & Cell Selection state for Excel / Google Sheets interaction
   const [isMouseDown, setIsMouseDown] = useState(false);
@@ -907,11 +979,23 @@ export default function BatchTab({
         onClose={() => setIsMapModalOpen(false)}
         rows={rows}
         selectedRowIds={selectedRowIds}
+        onSelectPoint={(rowId) => setSelectedRowIds(new Set([rowId]))}
         lang={lang}
         metricDecimals={metricDecimals}
         geoDecimals={geoDecimals}
         formatDMS={formatDMS}
       />
+
+      {/* Smart Column Mapping Wizard */}
+      {importResult && (
+        <ColumnMappingWizard
+          isOpen={isWizardOpen}
+          importResult={importResult}
+          lang={lang}
+          onConfirm={handleConfirmMapping}
+          onCancel={() => setIsWizardOpen(false)}
+        />
+      )}
 
       {/* Configuration Controls Bar */}
       <div className="bg-white dark:bg-slate-800 rounded-xl border border-neutral-200/80 dark:border-slate-700 p-6 shadow-sm space-y-4" id="batch_controls">
@@ -998,6 +1082,22 @@ export default function BatchTab({
           </button>
 
           <button
+            onClick={() => fileInputRef.current?.click()}
+            className="px-3.5 py-2 bg-emerald-700 hover:bg-emerald-600 text-white rounded-lg text-sm font-bold transition-colors flex items-center gap-2 shadow-sm"
+            title={lang === "ar" ? "استيراد ذكي من ملفات Excel وCSV" : "Smart File Import"}
+          >
+            <UploadCloud className="w-4 h-4" />
+            <span>{lang === "ar" ? "استيراد ملف ذكي (Excel/CSV)" : "Smart File Import"}</span>
+          </button>
+          <input
+            type="file"
+            ref={fileInputRef}
+            accept=".xlsx,.xls,.csv,.tsv,.txt"
+            onChange={handleFileSelect}
+            className="hidden"
+          />
+
+          <button
             onClick={handlePasteFromClipboard}
             className="px-3.5 py-2 bg-neutral-100 dark:bg-slate-700 hover:bg-neutral-200 dark:hover:bg-slate-600 text-neutral-700 dark:text-slate-200 rounded-lg text-sm font-semibold transition-colors flex items-center gap-2 border border-neutral-300/60 dark:border-slate-600"
             title={lang === "ar" ? "لصق الحافظة كجدول" : "Paste Clipboard"}
@@ -1040,6 +1140,13 @@ export default function BatchTab({
             <span>{t.clearAll}</span>
           </button>
         </div>
+
+        {importNotification && (
+          <div className="p-3 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-200 text-xs rounded-xl flex items-center gap-2 font-bold shadow-sm">
+            <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+            <span>{importNotification}</span>
+          </div>
+        )}
 
         {pasteError && (
           <div className="p-3 bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-400 text-xs rounded-lg">

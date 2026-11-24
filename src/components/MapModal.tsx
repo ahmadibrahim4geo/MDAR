@@ -15,6 +15,7 @@ interface MapModalProps {
   onClose: () => void;
   rows: BatchRow[];
   selectedRowIds?: Set<number>;
+  onSelectPoint?: (rowId: number) => void;
   lang: "ar" | "en";
   metricDecimals: number;
   geoDecimals: number;
@@ -26,6 +27,7 @@ export default function MapModal({
   onClose,
   rows,
   selectedRowIds,
+  onSelectPoint,
   lang,
   metricDecimals,
   geoDecimals,
@@ -126,16 +128,23 @@ export default function MapModal({
       const dmsLatStr = r.outputDMSLat || formatDMS(lat, true);
       const dmsLonStr = r.outputDMSLon || formatDMS(lon, false);
 
+      const isSelected = selectedRowIds ? selectedRowIds.has(r.id) : false;
+      const bgGradient = isSelected
+        ? "linear-gradient(135deg, #f59e0b, #d97706)"
+        : "linear-gradient(135deg, #059669, #047857)";
+      const borderStyle = isSelected ? "3px solid #fef08a" : "2px solid #ffffff";
+      const scaleStyle = isSelected ? "transform: scale(1.15);" : "";
+
       // Create Custom Styled HTML Pin
       const customIcon = L.divIcon({
         className: "custom-leaflet-marker",
         html: `
-          <div style="position: relative; display: flex; flex-direction: column; items-center; align-items: center; justify-content: center; transform: translate(-50%, -100%);">
-            <div style="background: linear-gradient(135deg, #059669, #047857); color: white; font-weight: bold; font-size: 11px; padding: 3px 8px; border-radius: 9999px; border: 2px solid #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.4); white-space: nowrap; display: flex; align-items: center; gap: 4px;">
+          <div style="position: relative; display: flex; flex-direction: column; items-center; align-items: center; justify-content: center; transform: translate(-50%, -100%); ${scaleStyle}">
+            <div style="background: ${bgGradient}; color: white; font-weight: bold; font-size: 11px; padding: 3px 8px; border-radius: 9999px; border: ${borderStyle}; box-shadow: 0 4px 12px rgba(0,0,0,0.4); white-space: nowrap; display: flex; align-items: center; gap: 4px;">
               <span>📍</span> <span>${pId}</span>
             </div>
-            <div style="width: 2px; height: 10px; background-color: #047857;"></div>
-            <div style="width: 8px; height: 8px; background-color: #fbbf24; border-radius: 50%; border: 2px solid #000;"></div>
+            <div style="width: 2px; height: 10px; background-color: ${isSelected ? '#d97706' : '#047857'};"></div>
+            <div style="width: 8px; height: 8px; background-color: ${isSelected ? '#ef4444' : '#fbbf24'}; border-radius: 50%; border: 2px solid #000;"></div>
           </div>
         `,
         iconSize: [0, 0],
@@ -144,7 +153,7 @@ export default function MapModal({
 
       const popupContent = `
         <div style="font-family: system-ui, sans-serif; font-size: 12px; line-height: 1.5; color: #1e293b; direction: ${isAr ? 'rtl' : 'ltr'}; min-width: 210px;">
-          <div style="background-color: #047857; color: white; padding: 6px 10px; border-radius: 6px 6px 0 0; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+          <div style="background-color: ${isSelected ? '#d97706' : '#047857'}; color: white; padding: 6px 10px; border-radius: 6px 6px 0 0; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
             <span>📍 ${isAr ? "نقطة" : "Point"}: ${pId}</span>
           </div>
           <div style="padding: 10px; background-color: #ffffff; border: 1px solid #e2e8f0; border-top: none; border-radius: 0 0 6px 6px;">
@@ -177,6 +186,10 @@ export default function MapModal({
 
       const marker = L.marker([lat, lon], { icon: customIcon }).bindPopup(popupContent, {
         maxWidth: 280,
+      });
+
+      marker.on("click", () => {
+        if (onSelectPoint) onSelectPoint(r.id);
       });
 
       markersGroup.addLayer(marker);

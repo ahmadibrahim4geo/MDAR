@@ -1,5 +1,5 @@
 /**
- * مدار – MِDAR | Phase 2 Geodetic Transformation & Verification Test Suite
+ * مدار – MDAR | Phase 2 Geodetic Transformation & Verification Test Suite
  * Validates forward and reverse conversions across verified Arab and Global CRS definitions.
  */
 
@@ -117,7 +117,7 @@ const testCases: TestCase[] = [
 
 function runArabCatalogTests() {
   console.log("================================================================================");
-  console.log(" مدار – MِDAR | Verified Arab & Global CRS Catalog Roundtrip & Verification");
+  console.log(" مدار – MDAR | Verified Arab & Global CRS Catalog Roundtrip & Verification");
   console.log("================================================================================\n");
 
   const results: any[] = [];

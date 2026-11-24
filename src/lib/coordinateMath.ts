@@ -529,7 +529,7 @@ export function convertCoordinates(
   const warnings: string[] = [];
   let operationId = "EPSG Standard Transformation";
   let accuracyMeters = 0.05;
-  let provenance = "MِDAR Dual-Engine Geodetic Framework";
+  let provenance = "MDAR Dual-Engine Geodetic Framework";
 
   // Height / 2D notice
   warnings.push("تنبيه: التحويل يفترض إحداثيات أفقية ثنائية الأبعاد (2D). الارتفاعات تتطلب نموذج جيويد ونظام إسناد رأسي مستقل.");

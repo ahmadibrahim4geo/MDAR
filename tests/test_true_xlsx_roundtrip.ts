@@ -1,5 +1,5 @@
 /**
- * مدار – MِDAR | Phase 4 True XLSX Roundtrip & Spreadsheet Security Test
+ * مدار – MDAR | Phase 4 True XLSX Roundtrip & Spreadsheet Security Test
  * Validates genuine OOXML generation, formula injection sanitization,
  * and lossless numerical readback via read-excel-file.
  */
@@ -13,7 +13,7 @@ import * as path from "path";
 
 async function runXlsxVerification() {
   console.log("================================================================================");
-  console.log(" مدار – MِDAR | True XLSX & Spreadsheet Security Verification (T3 DoneProof)");
+  console.log(" مدار – MDAR | True XLSX & Spreadsheet Security Verification (T3 DoneProof)");
   console.log("================================================================================\n");
 
   const testRows: BatchRow[] = [

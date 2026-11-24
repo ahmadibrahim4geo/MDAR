@@ -1,5 +1,5 @@
 /**
- * مدار – MِDAR | Service Worker for Offline Execution & Asset Caching (PWA)
+ * مدار – MDAR | Service Worker for Offline Execution & Asset Caching (PWA)
  * Enables 100% offline functionality in field environments without internet access.
  */
 
@@ -15,7 +15,7 @@ const PRECACHE_ASSETS = [
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log("[MِDAR SW] Pre-caching core application shell and companion workbook");
+      console.log("[MDAR SW] Pre-caching core application shell and companion workbook");
       return cache.addAll(PRECACHE_ASSETS);
     }).then(() => self.skipWaiting())
   );
@@ -29,7 +29,7 @@ self.addEventListener("activate", (event) => {
         cacheNames
           .filter((name) => name !== CACHE_NAME)
           .map((name) => {
-            console.log(`[MِDAR SW] Removing obsolete cache: ${name}`);
+            console.log(`[MDAR SW] Removing obsolete cache: ${name}`);
             return caches.delete(name);
           })
       );

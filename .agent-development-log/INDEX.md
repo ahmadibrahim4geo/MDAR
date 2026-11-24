@@ -21,3 +21,5 @@ create a linked revision or cancellation. This local hash chain is not a signatu
 | [#0014](reports/0014.md) | 2026-11-24T16:17:00+00:00 | verification | completed | #0013 | Phase 7 Static Code and UI Integration Verification (T0 DoneProof) |
 | [#0015](reports/0015.md) | 2026-11-24T16:20:00+00:00 | implementation | completed | #0014 | Phase 8 Offline PWA, Service Worker, and User-Testing Distribution |
 | [#0016](reports/0016.md) | 2026-11-24T16:22:00+00:00 | verification | completed | #0015 | Comprehensive 8-Suite DoneProof Audit across all phases (T0-T4) |
+| [#0017](reports/0017.md) | 2026-11-24T17:00:00+00:00 | request | approved | #0016 | Approve Unified Web & Excel Professional Development Plan (MDAR) |
+| [#0018](reports/0018.md) | 2026-11-24T17:25:00+00:00 | work | completed | #0017 | Implement and verify unified MDAR Web & MDAR Excel (21 Sheets, Smart Import, Column Mapping Wizard, DoneProof) |

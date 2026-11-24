@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "sequence": 17,
+  "timestamp_utc": "2026-11-24T17:00:00+00:00",
+  "kind": "request",
+  "status": "approved",
+  "summary": "Approve Unified Web & Excel Professional Development Plan (MDAR)",
+  "details": "Received comprehensive user mandate for MDAR: unified brand identity (English MDAR / Arabic مدار), Smart Import Engine, Smart Column Detection & Mapping Wizard, enhanced Data Grid with Map selection sync, complete reconstruction of MDAR Excel to 21 organized sheets, and GitHub Pages offline deployment readiness.",
+  "references": [
+    16
+  ],
+  "task_id": "",
+  "plan_revision": "1",
+  "changed_files": [
+    "plans/active/0002_MDAR-Unified-Web-and-Excel-Professional-Development/REQUEST.md",
+    "plans/active/0002_MDAR-Unified-Web-and-Excel-Professional-Development/PLAN.md",
+    "plans/active/0002_MDAR-Unified-Web-and-Excel-Professional-Development/STATUS.json"
+  ],
+  "tests": [],
+  "test_result": "not_run",
+  "commit": "",
+  "previous_hash": "01a2b2ab74da153e5ef71a429b24df824d4cdaf12f2cb8e78c40229d9237c927",
+  "hash": "47555db439268d09bdb50a37e0805ecbdfdfe504dd4033d40a6b687cd6676945"
+}
