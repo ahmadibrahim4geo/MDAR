@@ -8,11 +8,12 @@ import { AppSettings, TranslationDictionary } from "./types";
 import { AR_TRANSLATION, EN_TRANSLATION } from "./lib/translation";
 import HomeTab from "./components/HomeTab";
 import BatchTab from "./components/BatchTab";
+import VectorReprojectTab from "./components/VectorReprojectTab";
 import HelpTab from "./components/HelpTab";
 import SettingsTab from "./components/SettingsTab";
 import CatalogTab from "./components/CatalogTab";
 import Logo from "./components/Logo";
-import { Navigation, FileSpreadsheet, BookOpen, Settings, Database, Globe, Sun, Moon } from "lucide-react";
+import { Navigation, FileSpreadsheet, Layers, BookOpen, Settings, Database, Globe, Sun, Moon } from "lucide-react";
 
 export default function App() {
   // Application settings (Persisted client-side for ease of use)
@@ -32,7 +33,7 @@ export default function App() {
     };
   });
 
-  const [activeTab, setActiveTab] = useState<"home" | "batch" | "help" | "settings" | "catalog">("home");
+  const [activeTab, setActiveTab] = useState<"home" | "batch" | "vector" | "help" | "settings" | "catalog">("home");
 
   // Sync settings with localStorage and apply document dark class
   useEffect(() => {
@@ -128,6 +129,18 @@ export default function App() {
             </button>
 
             <button
+              onClick={() => setActiveTab("vector")}
+              className={`flex items-center gap-2 px-5 py-3 border-b-2 text-sm font-semibold transition-all ${
+                activeTab === "vector"
+                  ? "border-emerald-600 text-emerald-700 dark:text-emerald-400 bg-emerald-50/20 dark:bg-emerald-950/30"
+                  : "border-transparent text-neutral-500 dark:text-slate-400 hover:text-neutral-800 dark:hover:text-slate-200 hover:border-neutral-300"
+              }`}
+            >
+              <Layers className="w-4 h-4 shrink-0" />
+              <span>{t.tabVector}</span>
+            </button>
+
+            <button
               onClick={() => setActiveTab("help")}
               className={`flex items-center gap-2 px-5 py-3 border-b-2 text-sm font-semibold transition-all ${
                 activeTab === "help"
@@ -182,6 +195,12 @@ export default function App() {
                 geoDecimals={settings.geoDecimals}
                 geoOrder={settings.geoOrder}
                 metricOrder={settings.metricOrder}
+              />
+            )}
+            {activeTab === "vector" && (
+              <VectorReprojectTab
+                t={t}
+                lang={settings.language}
               />
             )}
             {activeTab === "help" && <HelpTab />}

@@ -144,6 +144,7 @@ export interface TranslationDictionary {
   appSubtitle: string;
   tabHome: string;
   tabBatch: string;
+  tabVector: string;
   tabHelp: string;
   tabSettings: string;
   tabCatalog: string;
