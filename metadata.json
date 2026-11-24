@@ -1,6 +1,6 @@
 {
-  "name": "Egypt Global Coordinate Converter",
-  "description": "A precise offline tool for converting between Egyptian (ETM, MTM) and Global (WGS 84, UTM, Web Mercator) coordinate systems with direct copy-paste support and interactive Arabic guide.",
+  "name": "مدار – MِDAR",
+  "description": "Universal Coordinate & Geospatial Transformation Platform (Mapping, Datum Adjustment and Reprojection) with verified Arab & global geodetic datums, high-precision analytical Molodensky-Badekas, Proj4 Clenshaw TM/LCC/Cassini projections, batch processing, and GIS file reprojection.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }

@@ -513,8 +513,8 @@ export function convertCoordinates(
   val2: number, // Column 2: Latitude (Lat) if Geographic, Northing (Y) if Projected
   sourceCRS: CRSDefinition,
   targetCRS: CRSDefinition,
-  isInputMetric: boolean,
-  isOutputMetric: boolean,
+  isInputMetric: boolean = sourceCRS.type === CRSType.PROJECTED,
+  isOutputMetric: boolean = targetCRS.type === CRSType.PROJECTED,
   targetMode?: CRSDefinition // Dynamic override of target belt/zone
 ): {
   out1: number; // Converted Column 1 (Easting/Lon)

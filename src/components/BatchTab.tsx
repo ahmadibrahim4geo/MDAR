@@ -777,7 +777,9 @@ export default function BatchTab({
               outputDMS: `${outDMSLatStr} , ${outDMSLonStr}`,
               outputZone: outZoneStr,
               status: "success" as const,
-              warnings: res.warnings
+              warnings: res.warnings,
+              operationId: res.operationId,
+              accuracyMeters: res.accuracyMeters
             };
           } catch (err) {
             return {
@@ -897,6 +899,8 @@ export default function BatchTab({
         metricDecimals={metricDecimals}
         geoDecimals={geoDecimals}
         formatDMS={formatDMS}
+        sourceCRSName={srcCRS.nameAr || srcCRS.nameEn}
+        targetCRSName={tgtCRS.nameAr || tgtCRS.nameEn}
       />
       <MapModal
         isOpen={isMapModalOpen}

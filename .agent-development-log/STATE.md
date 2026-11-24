@@ -1,7 +1,7 @@
 # Project development state — agent handoff
 
 Read with INDEX.md and the linked reports. Independently inspect code and tests.
-Recorded steps: 6
+Recorded steps: 8
 
 ## Latest records
 
@@ -11,6 +11,8 @@ Recorded steps: 6
 - #0004 [completed] Phase 1 Geodetic Engine Feasibility and Proj4 integration (related: #0003)
 - #0005 [completed] Phase 2 Arab and Global CRS Catalog verification and proj4String integration (related: #0004)
 - #0006 [completed] Phase 2 Arab CRS Transformations Roundtrip & Verification (T1 DoneProof) (related: #0005)
+- #0007 [completed] Phase 3 and 4 UI Brand Elevation and True XLSX Export Engine (related: #0006)
+- #0008 [completed] Phase 4 True XLSX Roundtrip & Spreadsheet Security Verification (T3 DoneProof) (related: #0007)
 
 ## Open/blocked records (confirm whether still applicable)
 

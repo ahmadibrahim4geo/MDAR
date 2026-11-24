@@ -41,6 +41,8 @@ export default function HomeTab({ t, lang, metricDecimals, geoDecimals }: HomeTa
   const [outZone, setOutZone] = useState<string>("");
   const [outLon, setOutLon] = useState<number | undefined>(undefined);
   const [outLat, setOutLat] = useState<number | undefined>(undefined);
+  const [operationId, setOperationId] = useState<string | undefined>(undefined);
+  const [accuracyMeters, setAccuracyMeters] = useState<number | undefined>(undefined);
   const [warnings, setWarnings] = useState<string[]>([]);
   const [copied, setCopied] = useState(false);
   const [error, setError] = useState(false);
@@ -83,6 +85,8 @@ export default function HomeTab({ t, lang, metricDecimals, geoDecimals }: HomeTa
       
       setOutLon(result.lonWGS84);
       setOutLat(result.latWGS84);
+      setOperationId(result.operationId);
+      setAccuracyMeters(result.accuracyMeters);
       
       // Format outputs according to configuration
       if (isTgtMetric) {
@@ -412,6 +416,37 @@ export default function HomeTab({ t, lang, metricDecimals, geoDecimals }: HomeTa
                   </span>
                   <div className="text-sm font-semibold text-emerald-700 dark:text-emerald-400 mt-1 bg-emerald-50 dark:bg-emerald-950/40 px-2.5 py-1 rounded-md inline-block border border-emerald-100 dark:border-emerald-800">
                     {outZone || "---"}
+                  </div>
+                </div>
+
+                {/* Geodetic Provenance & Accuracy Badges */}
+                <div className="pt-3 border-t border-neutral-100 dark:border-slate-700/80 space-y-2">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="text-xs font-medium text-neutral-500 dark:text-slate-400">
+                      {t.operationBadge}
+                    </span>
+                    <span className="text-xs font-mono font-semibold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600">
+                      {operationId || "EPSG Standard Transformation"}
+                    </span>
+                  </div>
+
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <span className="text-xs font-medium text-neutral-500 dark:text-slate-400">
+                      {t.accuracyBadge}
+                    </span>
+                    <span className={`text-xs font-bold px-2 py-0.5 rounded border ${
+                      (accuracyMeters ?? 0) <= 0.05
+                        ? "bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800"
+                        : (accuracyMeters ?? 0) <= 2.0
+                        ? "bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 border-blue-300 dark:border-blue-800"
+                        : "bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 border-amber-300 dark:border-amber-800"
+                    }`}>
+                      {accuracyMeters !== undefined 
+                        ? (accuracyMeters === 0 
+                            ? (lang === "ar" ? "تحليلي دقيق (0.00م)" : "Exact Analytical (0.00m)") 
+                            : `±${accuracyMeters}m (${(accuracyMeters <= 0.05 ? (lang === "ar" ? "دقة سنتيمترية" : "Centimetric") : (accuracyMeters <= 2 ? (lang === "ar" ? "دقة مساحية معتمدة" : "Survey Grade") : (lang === "ar" ? "إزاحة تقريبية" : "Approximate Shift")))})`)
+                        : "±1.2m"}
+                    </span>
                   </div>
                 </div>
               </div>

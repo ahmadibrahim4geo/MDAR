@@ -6,8 +6,8 @@
 import { TranslationDictionary } from "../types";
 
 export const AR_TRANSLATION: TranslationDictionary = {
-  appTitle: "مُحوّل الإحداثيات المصرية والعالمية",
-  appSubtitle: "أداة هندسية دقيقة لتحويل ومعالجة الإحداثيات المساحية والجغرافية",
+  appTitle: "مدار – MِDAR",
+  appSubtitle: "المنصة الشاملة لتحويل وضبط وإسقاط الإحداثيات والبيانات الجيومكانية (Mapping, Datum Adjustment and Reprojection)",
   tabHome: "الرئيسية (تحويل فردي)",
   tabBatch: "تحويل جماعي (نسخ ولصق)",
   tabHelp: "دليل المساعدة والمصطلحات",
@@ -40,6 +40,9 @@ export const AR_TRANSLATION: TranslationDictionary = {
   successMsg: "تم التحويل بنجاح!",
   errorMsg: "خطأ في معالجة المدخلات. تأكد من صحة الصيغة.",
   emptyMsg: "يرجى إدخال قيم صالحة للمصدر.",
+  operationBadge: "مسار التحويل الجيوديسي",
+  accuracyBadge: "الدقة الاسمية",
+  geodeticNotes: "الملاحظات الجيوديسية والمحدّدات",
   
   rowId: "م",
   pointId: "رمز النقطة",
@@ -95,8 +98,8 @@ export const AR_TRANSLATION: TranslationDictionary = {
 };
 
 export const EN_TRANSLATION: TranslationDictionary = {
-  appTitle: "Egypt & Global Coordinate Converter",
-  appSubtitle: "A precise engineering tool for converting survey and geographic coordinates",
+  appTitle: "مدار – MِDAR",
+  appSubtitle: "Universal Coordinate & Geospatial Transformation Platform (Mapping, Datum Adjustment and Reprojection)",
   tabHome: "Home (Single Conversion)",
   tabBatch: "Batch Conversion (Copy & Paste)",
   tabHelp: "Help & Terms Glossary",
@@ -129,6 +132,9 @@ export const EN_TRANSLATION: TranslationDictionary = {
   successMsg: "Converted successfully!",
   errorMsg: "Input parsing error. Please check your coordinate formats.",
   emptyMsg: "Please enter valid source coordinates.",
+  operationBadge: "Geodetic Operation",
+  accuracyBadge: "Nominal Accuracy",
+  geodeticNotes: "Geodetic Notes & Disclaimers",
   
   rowId: "ID",
   pointId: "Point ID",

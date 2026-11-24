@@ -176,6 +176,9 @@ export interface TranslationDictionary {
   successMsg: string;
   errorMsg: string;
   emptyMsg: string;
+  operationBadge: string;
+  accuracyBadge: string;
+  geodeticNotes: string;
   
   // Table headers
   rowId: string;

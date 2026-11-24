@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import { Download, X, FileSpreadsheet, Check, FileText, Settings2, Table, Copy, Globe } from "lucide-react";
 import { BatchRow } from "../types";
 import { downloadKMLFile } from "../utils/kmlExport";
+import { exportBatchToXLSX, sanitizeCellValue } from "../utils/excelExport";
 
 interface ExportModalProps {
   isOpen: boolean;
@@ -17,6 +18,8 @@ interface ExportModalProps {
   metricDecimals: number;
   geoDecimals: number;
   formatDMS: (val: number | undefined, isLat: boolean) => string;
+  sourceCRSName?: string;
+  targetCRSName?: string;
 }
 
 export default function ExportModal({
@@ -28,6 +31,8 @@ export default function ExportModal({
   metricDecimals,
   geoDecimals,
   formatDMS,
+  sourceCRSName,
+  targetCRSName,
 }: ExportModalProps) {
   if (!isOpen) return null;
 
@@ -132,83 +137,28 @@ export default function ExportModal({
     const dateStr = new Date().toISOString().slice(0, 10);
 
     if (exportFormat === "excel") {
-      // Generate Native Excel HTML/XML Spreadsheet table (.xls)
-      const isRtlStr = isAr ? 'dir="rtl"' : 'dir="ltr"';
-      const headerHtml = headers
-        .map((h) => `<th style="background-color: #047857; color: #ffffff; font-weight: bold; border: 1px solid #065f46; padding: 8px; text-align: center;">${h}</th>`)
-        .join("");
-
-      const rowsHtml = targetRows
-        .map((r) => {
-          const pId = r.pointId || "";
-          const in1 = r.input1 || "";
-          const in2 = r.input2 || "";
-          const outX = r.outputX !== undefined ? r.outputX.toFixed(metricDecimals) : "";
-          const outY = r.outputY !== undefined ? r.outputY.toFixed(metricDecimals) : "";
-          const zone = r.outputZone || "";
-          const lon = r.outputLon !== undefined ? r.outputLon.toFixed(geoDecimals) : "";
-          const lat = r.outputLat !== undefined ? r.outputLat.toFixed(geoDecimals) : "";
-          const dmsLon = r.outputDMSLon || formatDMS(r.outputLon, false);
-          const dmsLat = r.outputDMSLat || formatDMS(r.outputLat, true);
-          const status = r.status === "success" ? (isAr ? "نجاح" : "Success") : r.status === "error" ? (isAr ? "خطأ" : "Error") : (isAr ? "فارغ" : "Empty");
-
-          const cells = [pId, in1, in2, outX, outY, zone, lon, lat, dmsLon, dmsLat, status]
-            .map((val) => `<td style="border: 1px solid #cbd5e1; padding: 6px; text-align: center; mso-number-format:'\\@';">${val}</td>`)
-            .join("");
-
-          return `<tr>${cells}</tr>`;
-        })
-        .join("\n");
-
-      const excelTemplate = `
-        <html xmlns:o="urn:schemas-microsoft-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
-          <head>
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-            <!--[if gte mso 9]>
-            <xml>
-              <x:ExcelWorkbook>
-                <x:ExcelWorksheets>
-                  <x:ExcelWorksheet>
-                    <x:Name>Coordinates</x:Name>
-                    <x:WorksheetOptions>
-                      <x:DisplayGridlines/>
-                      ${isAr ? "<x:DisplayRightToLeft/>" : ""}
-                    </x:WorksheetOptions>
-                  </x:ExcelWorksheet>
-                </x:ExcelWorksheets>
-              </x:ExcelWorkbook>
-            </xml>
-            <![endif]-->
-          </head>
-          <body ${isRtlStr}>
-            <table border="1">
-              <thead>
-                <tr>${headerHtml}</tr>
-              </thead>
-              <tbody>
-                ${rowsHtml}
-              </tbody>
-            </table>
-          </body>
-        </html>
-      `;
-
-      const blob = new Blob(["\uFEFF" + excelTemplate], { type: "application/vnd.ms-excel;charset=utf-8;" });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.setAttribute("download", `Egypt_Coordinates_Batch_${dateStr}.xls`);
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
+      exportBatchToXLSX({
+        rows: targetRows,
+        headers,
+        lang,
+        metricDecimals,
+        geoDecimals,
+        formatDMS,
+        sourceCRSName,
+        targetCRSName,
+        operationId: targetRows.find(r => r.operationId)?.operationId,
+        accuracyMeters: targetRows.find(r => r.accuracyMeters)?.accuracyMeters
+      }).then(() => {
+        onClose();
+      });
+      return;
     } else {
       // CSV Export (Comma or Semicolon)
       const delimiter = exportFormat === "csv_semicolon" ? ";" : ",";
 
       const escapeCell = (val: string | number | undefined) => {
         if (val === undefined || val === null) return '""';
-        const str = String(val).replace(/\r?\n/g, " ");
+        const str = sanitizeCellValue(val).replace(/\r?\n/g, " ");
         return `"${str.replace(/"/g, '""')}"`;
       };
 
