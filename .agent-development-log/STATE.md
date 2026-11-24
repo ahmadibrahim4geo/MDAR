@@ -1,7 +1,7 @@
 # Project development state — agent handoff
 
 Read with INDEX.md and the linked reports. Independently inspect code and tests.
-Recorded steps: 10
+Recorded steps: 14
 
 ## Latest records
 
@@ -15,6 +15,10 @@ Recorded steps: 10
 - #0008 [completed] Phase 4 True XLSX Roundtrip & Spreadsheet Security Verification (T3 DoneProof) (related: #0007)
 - #0009 [completed] Phase 5 Vector File Reprojection tab and multi-geometry transformation engine (related: #0008)
 - #0010 [completed] Phase 5 Vector Reprojection and Security Verification (T3 DoneProof) (related: #0009)
+- #0011 [completed] Phase 6 Excel Standard Companion Workbook generator with 9 specialized sheets (related: #0010)
+- #0012 [completed] Phase 6 Excel Companion Workbook Verification Suite (T3 DoneProof) (related: #0011)
+- #0013 [completed] Phase 7 Geodesy Tools & Knowledge Center elevation in HelpTab and CatalogTab (related: #0012)
+- #0014 [completed] Phase 7 Static Code and UI Integration Verification (T0 DoneProof) (related: #0013)
 
 ## Open/blocked records (confirm whether still applicable)
 

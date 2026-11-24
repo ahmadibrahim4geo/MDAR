@@ -311,6 +311,25 @@ export default function CatalogTab({ t, lang }: CatalogTabProps) {
                 <h3 className="text-base font-bold text-neutral-800 dark:text-slate-100">
                   {lang === "ar" ? crs.nameAr : crs.nameEn}
                 </h3>
+
+                {/* Operation & Accuracy Badges */}
+                <div className="flex items-center gap-2 flex-wrap mt-1">
+                  {crs.operationId && (
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-900/40 text-sky-800 dark:text-sky-300 border border-sky-300 dark:border-sky-700">
+                      Op: {crs.operationId}
+                    </span>
+                  )}
+                  {crs.accuracyMeters !== undefined && (
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700">
+                      ±{crs.accuracyMeters}m
+                    </span>
+                  )}
+                  {crs.areaName && (
+                    <span className="text-[10px] px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">
+                      {crs.areaName}
+                    </span>
+                  )}
+                </div>
               </div>
 
               {/* Card Details */}
@@ -367,6 +386,16 @@ export default function CatalogTab({ t, lang }: CatalogTabProps) {
                     {lang === "ar" 
                       ? "نظام ديناميكي محتسب تلقائياً لكل نقطة وفق خط الطول المحدد، يدعم التحويل المباشر مع الحفاظ على أعلى مستويات الدقة الجيوديسية."
                       : "A dynamic projection calculated per-point based on the input coordinate's longitude."}
+                  </div>
+                )}
+
+                {/* PROJ.4 Definition */}
+                {crs.proj4String && (
+                  <div className="pt-2 border-t border-neutral-100/60 dark:border-slate-700/60">
+                    <span className="text-[10px] text-neutral-400 block mb-1">PROJ.4 Definition:</span>
+                    <code className="text-[10px] font-mono bg-neutral-100 dark:bg-slate-900/80 px-2 py-1 rounded block text-neutral-700 dark:text-slate-300 overflow-x-auto whitespace-nowrap">
+                      {crs.proj4String}
+                    </code>
                   </div>
                 )}
               </div>
