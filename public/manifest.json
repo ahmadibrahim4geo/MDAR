@@ -1,0 +1,19 @@
+{
+  "name": "مدار – MِDAR | Universal Coordinate Transformation Platform",
+  "short_name": "مدار – MِDAR",
+  "description": "منصة مدار الشاملة للتحويلات المساحية وضبط المراجع الجيوديسية (Mapping, Datum Adjustment and Reprojection)",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f172a",
+  "theme_color": "#059669",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "./favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

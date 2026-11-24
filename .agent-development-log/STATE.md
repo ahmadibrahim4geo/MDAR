@@ -1,7 +1,7 @@
 # Project development state — agent handoff
 
 Read with INDEX.md and the linked reports. Independently inspect code and tests.
-Recorded steps: 14
+Recorded steps: 16
 
 ## Latest records
 
@@ -19,6 +19,8 @@ Recorded steps: 14
 - #0012 [completed] Phase 6 Excel Companion Workbook Verification Suite (T3 DoneProof) (related: #0011)
 - #0013 [completed] Phase 7 Geodesy Tools & Knowledge Center elevation in HelpTab and CatalogTab (related: #0012)
 - #0014 [completed] Phase 7 Static Code and UI Integration Verification (T0 DoneProof) (related: #0013)
+- #0015 [completed] Phase 8 Offline PWA, Service Worker, and User-Testing Distribution (related: #0014)
+- #0016 [completed] Comprehensive 8-Suite DoneProof Audit across all phases (T0-T4) (related: #0015)
 
 ## Open/blocked records (confirm whether still applicable)
 
