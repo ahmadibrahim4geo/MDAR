@@ -1,0 +1,16 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# GIS Development Skills: local testing/user artifacts
+/testing data/*
+!/testing data/.gitkeep
+/testing results/*
+!/testing results/.gitkeep
+/dist/user-testing/*
+!/dist/user-testing/.gitkeep

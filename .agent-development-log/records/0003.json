@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "sequence": 3,
+  "timestamp_utc": "2026-11-24T15:10:01+00:00",
+  "kind": "verification",
+  "status": "completed",
+  "summary": "Baseline mathematical verification test (T1 DoneProof)",
+  "details": "Executed tests/baseline_math.ts evaluating 8 mathematical tests: TM roundtrip (2.23mm residual), Web Mercator (1.18e-9m), Egypt 1907 Molodensky-Badekas (9.28e-10 deg), and 5 PROJ benchmark control points (Cairo, Alexandria, Riyadh, Mecca, Abu Dhabi) with residuals under 6mm. Results recorded in testing results/TR_0001_baseline_math.json.",
+  "references": [
+    2
+  ],
+  "task_id": "MDAR-T1-MATH",
+  "plan_revision": "r1",
+  "changed_files": [
+    "testing results/TR_0001_baseline_math.json"
+  ],
+  "tests": [
+    "npm.cmd exec tsx tests/baseline_math.ts"
+  ],
+  "test_result": "passed",
+  "commit": "",
+  "previous_hash": "3a650e25d5819aa5e1d92c4f55102f8b68a4468241976b5d522c1953206f3f29",
+  "hash": "3e325ada86fe07e561870b998c6ea6aab641e76c394409515733b6b319fa0013"
+}

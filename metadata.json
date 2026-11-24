@@ -1,0 +1,6 @@
+{
+  "name": "Egypt Global Coordinate Converter",
+  "description": "A precise offline tool for converting between Egyptian (ETM, MTM) and Global (WGS 84, UTM, Web Mercator) coordinate systems with direct copy-paste support and interactive Arabic guide.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

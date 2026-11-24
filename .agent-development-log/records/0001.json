@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "sequence": 1,
+  "timestamp_utc": "2026-11-24T15:07:18+00:00",
+  "kind": "request",
+  "status": "approved",
+  "summary": "Initialize project مدار – MDAR with GIS Development Skills and Project Governance",
+  "details": "Received user instructions to lead development of project مدار – MDAR. Inspected baseline code, established dual-authority governance, created tailored AGENTS.md, registered directories, quarantined candidate skills, and prepared phased roadmap.",
+  "references": [],
+  "task_id": "MDAR-INIT",
+  "plan_revision": "r1",
+  "changed_files": [],
+  "tests": [],
+  "test_result": "not_run",
+  "commit": "",
+  "previous_hash": null,
+  "hash": "0c1be8227e62c6f95dbd0ae2ce4d8d9433cfb4c9223e99753e3e486dcd71738d"
+}

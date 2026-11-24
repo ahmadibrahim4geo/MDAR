@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "skills": [
+    {
+      "id": "0001",
+      "name": "proj-wasm-engine",
+      "source": "https://github.com/OSGeo/PROJ",
+      "revision": "9.4.0",
+      "license": "MIT",
+      "license_evidence": "https://github.com/OSGeo/PROJ/blob/master/COPYING",
+      "declared_effects": [
+        "read"
+      ],
+      "dependencies": [],
+      "purpose": "Evaluate browser-based WebAssembly PROJ pipelines and proj.db datum transformations",
+      "status": "CANDIDATE_UNREVIEWED",
+      "path": "New Skill/candidates/0001_proj-wasm-engine",
+      "security_review": "NOT RUN",
+      "runtime_test": "NOT RUN",
+      "active": false
+    },
+    {
+      "id": "0002",
+      "name": "excel-ooxml-engineering",
+      "source": "https://github.com/exceljs/exceljs",
+      "revision": "4.4.0",
+      "license": "MIT",
+      "license_evidence": "https://github.com/exceljs/exceljs/blob/master/LICENSE",
+      "declared_effects": [
+        "write"
+      ],
+      "dependencies": [],
+      "purpose": "Evaluate headless generation of native OOXML Excel workbooks and cell formulas",
+      "status": "CANDIDATE_UNREVIEWED",
+      "path": "New Skill/candidates/0002_excel-ooxml-engineering",
+      "security_review": "NOT RUN",
+      "runtime_test": "NOT RUN",
+      "active": false
+    },
+    {
+      "id": "0003",
+      "name": "gdal3-vector-wasm",
+      "source": "https://github.com/bugra9/gdal3.js",
+      "revision": "2.9.0",
+      "license": "MIT",
+      "license_evidence": "https://github.com/bugra9/gdal3.js/blob/master/LICENSE",
+      "declared_effects": [
+        "read"
+      ],
+      "dependencies": [],
+      "purpose": "Evaluate client-side spatial file reprojection for GIS and CAD vector formats",
+      "status": "CANDIDATE_UNREVIEWED",
+      "path": "New Skill/candidates/0003_gdal3-vector-wasm",
+      "security_review": "NOT RUN",
+      "runtime_test": "NOT RUN",
+      "active": false
+    }
+  ]
+}

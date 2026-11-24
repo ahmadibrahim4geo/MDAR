@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "folders": {
+    ".agent-development-log": {
+      "purpose": "Append-only chronological project development history and agent session memory"
+    },
+    ".github": {
+      "purpose": "GitHub configuration, templates, and CI/CD workflows"
+    },
+    ".github/workflows": {
+      "purpose": "GitHub Actions CI/CD workflows for testing and GitHub Pages deployment"
+    },
+    "assets": {
+      "purpose": "Static application assets, brand identity files, and design resources"
+    },
+    "assets/.aistudio": {
+      "purpose": "AI Studio runtime integration and environment configuration"
+    },
+    "src": {
+      "purpose": "Application source code including React components, geodetic libraries, and utilities"
+    },
+    "src/components": {
+      "purpose": "React UI components for tabs, conversion forms, modals, and settings"
+    },
+    "src/lib": {
+      "purpose": "Core geodetic calculation engines, CRS catalog data, parsers, and translations"
+    },
+    "src/utils": {
+      "purpose": "Export helpers, formatting utilities, and file serialization functions"
+    },
+    "New Skill/candidates/0001_proj-wasm-engine": {
+      "purpose": "Quarantined metadata and evaluation for candidate PROJ WASM geodetic engine"
+    },
+    "New Skill/candidates/0002_excel-ooxml-engineering": {
+      "purpose": "Quarantined metadata and evaluation for candidate native OOXML Excel workbook generator"
+    },
+    "New Skill/candidates/0003_gdal3-vector-wasm": {
+      "purpose": "Quarantined metadata and evaluation for candidate GDAL3 vector file reprojection engine"
+    },
+    "tests": {
+      "purpose": "Automated unit, geodetic, and integration tests"
+    },
+    "plans/active/0001_MDAR-Baseline-and-Phased-Execution-Plan": {
+      "purpose": "Active implementation plan for Phase 0 baseline and roadmap"
+    }
+  }
+}
