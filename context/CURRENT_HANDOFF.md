@@ -45,7 +45,11 @@
    - Multi-format export center with formula injection protection (CWE-1236).
 
 6. **GitHub Pages & Offline Production:**
-   - Production bundle in `dist/` with relative base paths (`./`).
+   - Deployed at `https://ahmadibrahim4geo.github.io/MDAR/`.
+   - GitHub Pages `build_type` set to `workflow` via GitHub REST API.
+   - GitHub Actions workflow `.github/workflows/deploy.yml` builds and deploys `dist/` with dynamic base path `/MDAR/`.
+   - `public/.nojekyll` and `public/404.html` SPA routing support.
+   - Production bundle in `dist/` with relative base paths (`./`) locally and `/MDAR/` on GitHub Pages.
    - Isolated user-testing distribution in `dist/user-testing/`.
 
 ## Verification Summary (DoneProof Standard)
