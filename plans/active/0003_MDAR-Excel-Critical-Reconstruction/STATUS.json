@@ -1,0 +1,21 @@
+{
+  "id": "0003",
+  "title": "MDAR Excel Critical Reconstruction Order",
+  "status": "COMPLETED",
+  "approval": "USER_REQUESTED",
+  "approvedAt": "2026-11-24T19:33:13+02:00",
+  "startedAt": "2026-11-24T19:35:00+02:00",
+  "completedAt": "2026-11-24T20:00:25+02:00",
+  "revision": 1,
+  "evidence": [
+    "testing results/TR_0007_excel_application_readback.json",
+    "testing results/TR_0008_excel_application_verification.json",
+    "testing results/screenshots/00_Home.png",
+    "testing results/screenshots/01_Single_Point.png",
+    "testing results/screenshots/02_Batch_Converter.png",
+    "testing results/screenshots/03_Geodesy_Tools.png",
+    "testing results/screenshots/04_Accuracy_QA.png",
+    "testing results/screenshots/05_Documentation.png",
+    "reports/03_MDAR_EXCEL_CRITICAL_RECONSTRUCTION_DONEPROOF.md"
+  ]
+}

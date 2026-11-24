@@ -1,166 +1,178 @@
-# 🌍 محول الإحداثيات المصري والعالمي
-### Egypt & Global Geodetic Coordinate Converter
+# مدار – MDAR | Universal Coordinate Transformation Platform
+### Mapping, Datum Adjustment and Reprojection
 
 <div align="center">
 
-![Built with Google AI Studio](https://img.shields.io/badge/Built%20with-Google%20AI%20Studio-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-0284C7?style=for-the-badge&logo=github)](https://ahmadibrahim4geo.github.io/MDAR/)
+[![Repository](https://img.shields.io/badge/GitHub-Repository-0F172A?style=for-the-badge&logo=github)](https://github.com/ahmadibrahim4geo/MDAR.git)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React 18](https://img.shields.io/badge/React_18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite_6-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![PWA Ready](https://img.shields.io/badge/PWA-100%25_Offline-10B981?style=for-the-badge&logo=pwa&logoColor=white)](https://web.dev/progressive-web-apps/)
+[![Excel App](https://img.shields.io/badge/Excel-OOXML_Standalone_App-16A34A?style=for-the-badge&logo=microsoftexcel&logoColor=white)](excel/MDAR_Converter.xlsx)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=for-the-badge)](LICENSE)
 
 <br />
 
-> **"Build that wild idea." — Powered by Google AI Studio**
+```
+  __  __ _____             _____  
+ |  \/  |  __ \   /\      |  __ \ 
+ | \  / | |  | | /  \     | |__) |
+ | |\/| | |  | |/ /\ \    |  _  / 
+ | |  | | |__| / ____ \   | | \ \ 
+ |_|  |_|_____/_/    \_\  |_|  \_\
+  مدار – Mapping, Datum Adjustment and Reprojection
+```
 
-<br />
-
-<svg viewBox="0 0 100 100" width="120" height="120" xmlns="http://www.w3.org/2000/svg" style="background: #022C22; border-radius: 20px; padding: 12px; box-shadow: 0 10px 25px -5px rgba(5, 150, 105, 0.4);">
-  <defs>
-    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F59E0B" />
-      <stop offset="50%" stop-color="#FBBF24" />
-      <stop offset="100%" stop-color="#D97706" />
-    </linearGradient>
-    <linearGradient id="emeraldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#34D399" />
-      <stop offset="100%" stop-color="#059669" />
-    </linearGradient>
-    <linearGradient id="coreGold" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FEF08A" />
-      <stop offset="100%" stop-color="#F59E0B" />
-    </linearGradient>
-  </defs>
-  <circle cx="50" cy="50" r="45" stroke="#334155" stroke-width="2.5" />
-  <circle cx="50" cy="50" r="41" stroke="#059669" stroke-width="1.5" stroke-dasharray="3 3" stroke-opacity="0.7" />
-  <ellipse cx="50" cy="50" rx="41" ry="18" stroke="#10B981" stroke-width="1.2" stroke-opacity="0.35" />
-  <ellipse cx="50" cy="50" rx="18" ry="41" stroke="#10B981" stroke-width="1.2" stroke-opacity="0.35" />
-  <polygon points="50,20 22,74 50,66" fill="url(#emeraldGradient)" fill-opacity="0.9" />
-  <polygon points="50,20 50,66 78,74" fill="url(#emeraldGradient)" fill-opacity="0.65" />
-  <line x1="50" y1="20" x2="50" y2="66" stroke="#A7F3D0" stroke-width="1.5" stroke-opacity="0.8" />
-  <circle cx="50" cy="50" r="16" stroke="url(#goldGradient)" stroke-width="2.5" fill="#022C22" fill-opacity="0.85" />
-  <circle cx="50" cy="50" r="6" stroke="#FEF08A" stroke-width="1.5" />
-  <circle cx="50" cy="50" r="2.5" fill="url(#coreGold)" />
-  <path d="M50 8 V22 M50 78 V92 M8 50 H22 M78 50 H92" stroke="url(#goldGradient)" stroke-width="2.5" stroke-linecap="round" />
-  <polygon points="50,4 45,12 55,12" fill="#FBBF24" />
-</svg>
-
-### منصة مساحية هندسية احترافية لتحويل الإحداثيات والخرائط العبر-محلية والإقليمية والعالمية
-**Professional Geodetic Engineering Web Platform for Multi-Datum & Coordinate Transformations**
+**منصة هندسية ومساحية متكاملة ومفتوحة المصدر لتحويل أنظمة الإحداثيات، وتعديل المساند الجيوديسية، وتحويل ملفات GIS/CAD، مع تطبيق هندسي مستقل فائق الدقة داخل Microsoft Excel.**
 
 </div>
 
 ---
 
-## 📌 نبذة عن المشروع / Overview
+## 📌 نبذة عن المنصة / Overview
 
-تطبيق **محول الإحداثيات المصري والعالمي (Egypt & Global Coordinate Converter)** هو أداة هندسية ومساحية متكاملة مصممة للمهندسين المساحيين، أخصائيي نظم المعلومات الجغرافية (GIS)، والمخططين العمرانيين. يتيح البرنامج تحويل الإحداثيات بين الأنظمة الجغرافية العالمية (مثل WGS84) والأنظمة المسقطة المصرية (ETM Red, Purple, Blue, Extended Purple Belts) بالإضافة إلى أنظمة الدول العربية والأنظمة العالمية (UTM).
+**مدار – MDAR** هي منصة جيوديسية احترافية مجانية ومفتوحة المصدر، مصممة للمهندسين المساحيين وأخصائيي نظم المعلومات الجغرافية (GIS) والمخططين العمرانيين. تعمل المنصة محلياً بالكامل داخل المتصفح (100% Client-Side) دون أي خوادم خارجية أو نقل لبيانات المستخدم، مما يضمن أقصى معايير الخصوصية والأمان وسرية البيانات المساحية.
+
+توفر المنصة حلاً هندسياً شاملاً يجمع بين:
+1. **تطبيق ويب تفاعلي تقدمي (PWA)** يعمل دون اتصال بالإنترنت لتحويل النقاط الفردية والجماعية وإعادة إسقاط ملفات GIS/CAD.
+2. **تطبيق هندسي مستقل داخل Excel (`MDAR_Converter.xlsx`)** خالي تماماً من الماكرو ومبني بصيغ OpenXML الأصلية لمعالجة المشروعات المساحية مباشرة.
+3. **مرجع علمي شامل للأنظمة الإحداثية** يغطي الشبكات الوطنية المصرية، وأنظمة الدول العربية، والأنظمة العالمية UTM وUPS.
 
 ---
 
-## ⚙️ كيف يعمل البرنامج؟ / How it Works
+## 🏛️ الهوية والمعايير الجيوديسية / Geodetic Governance
 
-يعتمد البرنامج على محرك رياضيات مساحية دقيق يعمل محلياً بالكامل داخل المتصفح (Client-side Geodetic Engine) وفق المراحل التالية:
+- **اسم المشروع المعتمد:** **مدار – MDAR**
+  - **العرض العربي:** **مدار**
+  - **العرض الإنجليزي:** **MDAR** (ASCII uppercase: M-D-A-R)
+  - **الاسم الكامل:** **Mapping, Datum Adjustment and Reprojection**
+- **المرجع الإداري والتنفيذي:** `AGENTS.md`
+- **المرجع العلمي والجيوديسي:** `MDAR_MASTER_DEVELOPMENT_PLAN.md`
+- **مبدأ اللا-تخمين (Zero Math Guesswork):** جميع المعادلات والبارامترات مشتقة حصرياً من سجل EPSG الرسمي، ومواصفات هيئة المساحة المصرية (ESA)، ومحرك PROJ المرجعي.
 
+---
+
+## ⚙️ المحرك الجيوديسي والرياضي / Mathematical Engine
+
+تعتمد المنصة على صياغة رياضية صارمة تم اختبارها ومطابقتها مقابل محرك **PROJ 9.5+**:
+
+1. **مسقط ميركاتور المستعرض (Transverse Mercator - Redfearn Series):**
+   - معادلات التحويل المباشر والعكسي بدقة تقل عن **0.05 مليمتر** مقارنة بـ PROJ.
+   - حساب زاوية التقارب الشبكي (Grid Convergence $\gamma$) ومعامل المقياس النقطي (Point Scale Factor $k$).
+2. **نقل المساند الجيوديسية (Datum Shift):**
+   - **Egypt 1907 ↔ WGS 84:** تطبيق تحويل **Molodensky-Badekas (EPSG:7697)** ذو العشر معاملات المعتمد رسمياً للمساحة المصرية:
+     $$\Delta X = -127.535\text{ m}, \Delta Y = 113.495\text{ m}, \Delta Z = -12.700\text{ m}$$
+     $$R_x = +1.603747'', R_y = -0.153612'', R_z = -5.364408'', s = +5.33745\text{ ppm}$$
+     $$\text{Evaluation Point: } (4854969.728, 2945552.013, 2868447.610)\text{ m}$$
+3. **المجسمات الإهليلجية المعتمدة (Ellipsoids):**
+   - **Helmert 1906 (مصر 1907):** $a = 6378200.0\text{ m}, 1/f = 298.3$
+   - **WGS 84 (العالمي):** $a = 6378137.0\text{ m}, 1/f = 298.257223563$
+   - **Hayford 1924 / International 1924:** $a = 6378388.0\text{ m}, 1/f = 297.0$
+
+---
+
+## 📊 تطبيق مدار الهندسي داخل Excel (`MDAR_Converter.xlsx`)
+
+تمت إعادة بناء مصنف Excel بالكامل ليصبح تطبيقاً برمجياً مستقلاً داخل Microsoft Excel:
+- **سلامة البنية بنسبة 100% (Clean OpenXML):** القضاء التام على أخطاء `styles.xml` واستخدام معرفات تنسيق أرقام متوافقة مع معيار ISO/IEC 29500 تبدأ من `164` فما فوق.
+- **فتح نظيف خالي من رسائل الإصلاح:** تم اختباره عبر أتمتة COM على Microsoft Excel دون أي رسائل Repair.
+- **واجهات تشغيل هندسية مخصصة (6 أوراق تطبيقية):**
+  1. `00_Home`: لوحة التحكم وبطاقات الانتقال السريع ودليل الألوان.
+  2. `01_Single_Point`: محطة عمل للتحويل الفردي الفوري المربوط بالمحرك الجيوديسي.
+  3. `02_Batch_Converter`: جدول بيانات حقيقي (`ListObject: MDAR_BatchTable`) مع **توسع تلقائي للمعادلات والتنسيق عند لصق أو إضافة أي صفوف جديدة دون حد أقصى**.
+  4. `03_Geodesy_Tools`: أدوات حساب المسافات والانحرافات وتنسيق الدرجات الستينية DMS.
+  5. `04_Accuracy_QA`: لوحة ضبط الجودة ومقارنة النتائج الحسابية بالمرجعيات الرسمية.
+  6. `05_Documentation`: التوثيق الرياضي الكامل والمعادلات المرجعية.
+- **محركات حسابية مخفية (`_Engine_Math`, `_CRS_Catalog`):** محجوبة عن المستخدم العادي لحماية الصيغ الرياضية من التعديل العرضي.
+
+---
+
+## 🌐 الأنظمة الإحداثية المدعومة / Supported Systems
+
+### 1. الشبكة الوطنية المصرية (Egyptian Transverse Mercator - ETM)
+- **الحزام الأحمر (Red Belt - EPSG:22992):** خط الطول المركزي $31^\circ\text{ E}$، نقطة الأصل الافتراضية ($615000\text{ m E}, 810000\text{ m N}$).
+- **الحزام البنفسجي (Purple Belt - EPSG:22993):** خط الطول المركزي $27^\circ\text{ E}$، نقطة الأصل الافتراضية ($365000\text{ m E}, 810000\text{ m N}$).
+- **الحزام الأزرق (Blue Belt - EPSG:22994):** خط الطول المركزي $35^\circ\text{ E}$، نقطة الأصل الافتراضية ($300000\text{ m E}, 1100000\text{ m N}$).
+- **الحزام البنفسجي الممتد (Extended Purple Belt - EPSG:22995):** خط الطول المركزي $27^\circ\text{ E}$ لتغطية المشروعات القومية الغربية.
+
+### 2. أنظمة الدول العربية والخليج (Arab National Systems)
+- **المملكة العربية السعودية:** KSA-GRF17 / UTM Zones 36N, 37N, 38N, 39N (EPSG:9256..9259) مع إدارة العصر المرجعي Epoch 2017.0.
+- **الإمارات العربية المتحدة:** Dubai Local Transverse Mercator (DLTM), UTM Zones 39N, 40N.
+- **دولة قطر:** Qatar National Grid (QNG95 / EPSG:2932).
+- **دولة الكويت:** Kuwait Utility Grid (KTM / KGD93).
+- **سلطنة عمان:** Oman National Grid (ON-TM / PSD93).
+- **المملكة الأردنية الهاشمية:** Jordan Transverse Mercator (JTM / EPSG:23700).
+- **فلسطين:** Palestine 1923 / Palestine Grid (Cassini-Soldner).
+
+### 3. الأنظمة العالمية (Global Coordinate Systems)
+- **WGS 84 Geographic 2D (EPSG:4326):** تمثيل عشري DD وستيني DMS ودرجات ودقائق عشرية DDM.
+- **Universal Transverse Mercator (UTM):** النطاقات الشمالية والجنوبية (Zones 1–60).
+- **Web Mercator (EPSG:3857):** للعرض المتوافق مع خدمات الخرائط الرقمية.
+
+---
+
+## 📂 استيراد وإعادة إسقاط الملفات / Smart File Processing
+
+- **محرك الاستيراد الذكي (Smart Import Engine):** يدعم ملفات XLSX, XLS, CSV, TSV, TXT مع كشف تلقائي للترميز (UTF-8, Windows-1256)، والفواصل، والسطور التمهيدية، والفواصل العشرية الأوروبية.
+- **معالج تعيين الأعمدة (Column Mapping Wizard):** نافذة تفاعلية للتحقق من مطابقة الحقول ومقايضة X/Y وحفظ ملفات التعريف محلياً.
+- **إعادة إسقاط ملفات GIS المتجهة (Vector Reprojection):**
+  - Shapefile (ZIP), GeoJSON, KML, CSV, XLSX.
+  - حماية كاملة ضد هجمات قنابل الملفات المضغوطة (ZIP Bombs)، وهجمات الكيانات الخارجية (XXE)، وحقن معادلات الجداول (CWE-1236 Formula Injection Defense).
+
+---
+
+## 🚀 التشغيل والتثبيت المحلي / Installation & Development
+
+```bash
+# 1. استنساخ المستودع
+git clone https://github.com/ahmadibrahim4geo/MDAR.git
+cd MDAR
+
+# 2. تثبيت الحزم البرمجية
+npm install
+
+# 3. تشغيل خادم التطوير
+npm run dev
+
+# 4. بناء حزمة الإنتاج
+npm run build
+
+# 5. تشغيل حزمة اختبارات التحقق الشاملة (DoneProof)
+npm run lint
+npx tsx tests/baseline_math.ts
+npx tsx tests/test_arab_crs_transformations.ts
+npx tsx tests/test_true_xlsx_roundtrip.ts
+npx tsx tests/test_vector_reprojection.ts
+npx tsx tests/test_smart_import_and_detection.ts
+npx tsx tests/test_excel_companion_verification.ts
 ```
-[إدخال الإحداثيات / ملف اكسل] ──► [تحويل Datum 7-Parameters] ──► [إسقاط Krüger-TM / UTM] ──► [توقيع الخريطة والإنتاج]
-```
-
-1. **التحويل بين المجسمات المرجعية (Datum Transformation):**
-   - استخدام معادلات التحويل ثلاثية الأبعاد بـ 7 معاملات (7-Parameter Helmert Transformation) للتحويل بين مرجع مصر 1907 (Helmert 1906 Ellipsoid) والمرجع العالمي WGS84.
-2. **محرك الإسقاط الهندسي (Projection Calculations):**
-   - تطبيق معادلات إسقاط ميركاتور المستعرض المستحدث (Transverse Mercator / Krüger Equations) لحساب الإحداثيات المترية (Easting / Northing) بدقة تصل إلى أجزاء من المليمتر.
-3. **الفحص والتوقيع التفاعلي (Interactive Verification):**
-   - مطابقة النقاط المحولة على خرائط تفاعلية عالية الدقة وشوراع وأقمار صناعية مع تنبيهات عند خروج النقاط عن النطاق المساحي الرسمي للشرائح (Belt Boundary Warnings).
-4. **المعالجة الجماعية وتصدير البيانات (Batch Processing & Export):**
-   - قراءة وتحليل ملفات Excel (`.xlsx`, `.xls`) و CSV و TXT مباشرة وتصدير النتائج إلى صيغ مهنية متعددة.
 
 ---
 
-## ✨ المميزات الرئيسية / Key Features
+## 🛡️ الأمان والخصوصية / Security & Privacy
 
-### 1. 📐 دعم كامل للشبكة الوطنية المصرية (Egyptian National Grid ETM)
-- **الحزام الأحمر (Red Belt - EPSG:22992):** خط الطول المركزي $31^\circ\text{ E}$.
-- **الحزام البنفسجي (Purple Belt - EPSG:22993):** خط الطول المركزي $27^\circ\text{ E}$.
-- **الحزام الأزرق (Blue Belt - EPSG:22991):** خط الطول المركزي $35^\circ\text{ E}$.
-- **الحزام البنفسجي الممتد (Extended Purple Belt - EPSG:22994):** التغطية الغربية للمشروعات القومية.
-
-### 2. 🌐 الأنظمة العربية والإقليمية والعالمية (Arab & Global Systems)
-- **WGS84 Geographic:** خطوط الطول والعرض بالأشكال المختلفة (DD.dddd, DMS, DMM).
-- **UTM Zones 35N, 36N, 37N:** تغطية مصر والشرق الأوسط والخليج العربي.
-- **شبكات الدول العربية:** السعودية (KSA GRF17 / UTM), فلسطين (Palestine 1923 Belt), الأردن (JTM), الإمارات, قطر, الكويت, عمان, العراق, وغيرها.
-
-### 3. 📂 معالجة الملفات الضخمة (Batch File Processing)
-- رفع ملفات Excel و CSV وسحب وإسقاط النقاط المساحية.
-- التعرف التلقائي على أعمدة الإحداثيات وتحديد أرقام وأسماء النقاط والارتفاعات.
-- حساب الفروق والخطأ المتبقي والمسافات المساحية.
-
-### 4. 🛰️ معاينة النقاط على خرائط الأقمار الصناعية (Interactive Satellite Map)
-- خريطة تفاعلية مدعومة بالطبقات (أقمار صناعية Satellite، شوارع Street Map، فاتح Light Map).
-- معاينة حية لمواقع النقاط على سطح الأرض وحساب أبعاد الظل والحدود الإقليمية.
-
-### 5. 💾 تصدير مهني متعدد الصيغ (Multi-Format Exporting)
-- **AutoCAD DXF (R12):** تصدير النقاط والأنشطة كطبقات مساحية (Layers) جاهزة للفتح مباشرة على برنامج أوتوكاد.
-- **Google Earth KML:** ملفات KML مع بطاقات معلومات تفاعلية لكل نقطة مساحية.
-- **GeoJSON:** صيغة معيارية لتطبيقات نظم المعلومات الجغرافية (QGIS, ArcGIS, Web GIS).
-- **Excel & CSV:** جداول منسقة تحتوي على البيانات الأصلية والمحولة بدقة عشرية مخصصة.
-
-### 6. 🌐 واجهة مزدوجة ودعم الليالي (Bilingual & Dark Mode)
-- دعم كامل للغة العربية والإنجليزية (RTL / LTR).
-- مظهر ليلي داكن مريح للعين مع تخصيص لعدد الأرقام العشرية.
+1. **معالجة محلية 100%:** لا يتم إرسال أي إحداثيات أو ملفات مساحية إلى أي خادم خارجي.
+2. **Spreadsheet Formula Disarming (CWE-1236):** تحييد الرموز الخطرة (`=`, `+`, `-`, `@`) في النصوص المصدرة لمنع استغلال أوامر النظام.
+3. **XXE Protection:** نزع تعريفات `<!DOCTYPE>` و `<!ENTITY>` تلقائياً عند قراءة ملفات KML و XML.
+4. **Macro-Free Guarantee:** تطبيق Excel خالٍ تماماً من الماكرو ورموز VBA لضمان التوافق مع سياسات الأمان المؤسسية.
 
 ---
 
-## 🚀 تشغيل المشروع محلياً / Local Installation & Setup
+## 📑 الوثائق وسجلات التطوير / Documentation Index
 
-للتشغيل على جهازك الشخصي، يمكنك اتباع الخطوات التالية:
-
-### المتطلبات الأساسية / Prerequisites
-- **Node.js**: الإصدار 18 أو أحدث.
-- **npm** أو **yarn** أو **bun**.
-
-### خطوات التشغيل / Commands
-
-1. **استคลون المستودع (Clone Repository):**
-   ```bash
-   git clone https://github.com/ahmadibrahim4geo/Egypt-Global-Coordinate-Converter.git
-   cd Egypt-Global-Coordinate-Converter
-   ```
-
-2. **تثبيت الحزم والتبعيات (Install Dependencies):**
-   ```bash
-   npm install
-   ```
-
-3. **تشغيل خادم التطوير (Start Development Server):**
-   ```bash
-   npm run dev
-   ```
-   افتح المتصفح على العنوان: `http://localhost:3000`
-
-4. **بناء النسخة الإنتاجية (Build Production):**
-   ```bash
-   npm run build
-   ```
+- [PROJECT_STRUCTURE.md](file:///D:/My%20Software/MDAR/PROJECT_STRUCTURE.md) — البنية الشاملة للمستودع ومسارات الإنتاج.
+- [INDEX.md](file:///D:/My%20Software/MDAR/INDEX.md) — الفهرس المرجعي العام ومكتبة الوثائق.
+- [AGENTS.md](file:///D:/My%20Software/MDAR/AGENTS.md) — ميثاق الحوكمة البرمجية وضوابط النشر.
+- [MDAR_MASTER_DEVELOPMENT_PLAN.md](file:///D:/My%20Software/MDAR/MDAR_MASTER_DEVELOPMENT_PLAN.md) — الخطة الجيوديسية الرئيسية.
+- [reports/03_MDAR_EXCEL_CRITICAL_RECONSTRUCTION_DONEPROOF.md](file:///D:/My%20Software/MDAR/reports/03_MDAR_EXCEL_CRITICAL_RECONSTRUCTION_DONEPROOF.md) — تقرير إثبات الإنجاز ومطابقة Excel مع PROJ.
+- [.agent-development-log/INDEX.md](file:///D:/My%20Software/MDAR/.agent-development-log/INDEX.md) — سجل التطوير المتسلسل المرتبط بسلاسل التجزئة SHA-256.
 
 ---
 
-## 🛠️ التقنيات المستخدمة / Built With
+## 📜 الترخيص والملكية الفكرية / License & Copyright
 
-- **Google AI Studio**: صُمم وطُوّر باستخدام منصة الذكاء الاصطناعي من جوجل.
-- **React 18 & TypeScript**: بنية برمجية قوية وآمنة من الأخطاء.
-- **Vite**: محرك بناء سريع للويب.
-- **Tailwind CSS**: تصميم عصري وسريع التجاوب.
-- **Lucide React**: أيقونات مساحية وهندسية واضحة.
-- **Leaflet**: خريطة تفاعلية خفيفة وسريعة.
-
----
-
-## 📜 الترخيص / License
-
-هذا المشروع مرخص تحت رخصة **Apache 2.0** - يمكنك الاستخدام والتعديل الحر للمشروع مع الحفاظ على إشعار الملكية الفكرية.
-
-<div align="center">
-  <br />
-  <sub>تم تطوير هذا التطبيق بواسطة <b>أحمد إبراهيم (Ahmad Ibrahim)</b> بمساعدة <b>Google AI Studio</b></sub>
-</div>
+- **الترخيص:** مرخص بموجب **Apache License 2.0** - يمكنك الاستخدام والتطوير الحر مع الحفاظ على حقوق النسبة وإشعارات الملكية.
+- **المطور الرئيسي:** **أحمد إبراهيم (Ahmad Ibrahim)** — `ahmadibrahim.geo@gmail.com`
+- **حقوق الملكية الفكرية:** © 2026 أحمد إبراهيم – جميع الحقوق محفوظة لعلامة مدار (MDAR).

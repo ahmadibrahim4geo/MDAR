@@ -1,8 +1,8 @@
 # مدار – MDAR | Current Handoff & Session State
 
 - **Project:** **مدار – MDAR** (Mapping, Datum Adjustment and Reprojection)
-- **Status:** **UNIFIED WEB & EXCEL PROFESSIONAL DEVELOPMENT COMPLETED & VERIFIED (v1.1.0-release)**
-- **Release Version:** `v1.1.0-release`
+- **Status:** **EXCEL CRITICAL RECONSTRUCTION COMPLETED & VERIFIED (v1.2.0-Professional)**
+- **Release Version:** `v1.2.0-Professional`
 - **Master Plan:** `MDAR_MASTER_DEVELOPMENT_PLAN.md`
 - **Administrative Policy:** `AGENTS.md`
 - **Audit Date:** 2026-11-24
@@ -15,51 +15,58 @@
    - Arabic: **مدار**.
    - Full Name: **Mapping, Datum Adjustment and Reprojection**.
 
-2. **Smart Import Engine (`src/utils/smartImport.ts`):**
-   - Supports XLSX, XLS, CSV, TSV, TXT.
-   - Auto-detects encoding (UTF-8, Windows-1256 Arabic).
-   - Auto-discovers delimiters, header rows, data start rows, and European decimal commas.
-   - Multi-sheet workbook reading and client-side data staging.
+2. **MDAR Excel Reconstruction (`excel/MDAR_Converter.xlsx` — Standalone Engineering Application):**
+   - Reconstructed as a professional, standalone engineering application inside Microsoft Excel.
+   - Zero OOXML corruption: `xl/styles.xml` fixed, all custom number format IDs strictly `numFmtId >= 164` (164..166).
+   - Real Microsoft Excel COM automation verified with 0 repair or recovery dialogs.
+   - 6 user-facing application sheets:
+     - `00_Home`: Executive dashboard with working navigation links, brand identity, and color legend.
+     - `01_Single_Point`: Unified point conversion workstation with real-time dynamic formula updates.
+     - `02_Batch_Converter`: Real expandable Excel Table (`ListObject: MDAR_BatchTable`) with auto-expanding formulas and custom attributes.
+     - `03_Geodesy_Tools`: Geodetic distance, azimuth, scale factor, convergence, and DD/DMS tools.
+     - `04_Accuracy_QA`: Ground truth benchmark audit comparing workbook against PROJ/ESA control points.
+     - `05_Documentation`: Scientific formulas, projection parameters, and literature citations.
+   - 2 hidden technical engine sheets (`_Engine_Math`, `_CRS_Catalog`) protecting internal formulas.
+   - Real-time Transverse Mercator (Redfearn series) forward and inverse equations on correct ellipsoids (Helmert 1906, WGS 84).
+   - Molodensky-Badekas (EPSG:7697) 10-parameter geocentric datum shift.
+   - Legacy rejected version safely archived at `excel/archive/MDAR_Converter_v1.0_rejected_backup.xlsx`.
+   - 6 high-resolution screenshots generated directly from real Microsoft Excel COM in `testing results/screenshots/`.
 
-3. **Smart Column Detection (`src/utils/smartColumnDetection.ts`):**
-   - Bilingual synonym dictionary for X, Y, Z, Point ID, Name, CRS, Datum, Zone, Description.
-   - Coordinate value range and geodetic bounds validation.
-   - Heuristic confidence score (0-100%) and duplicate role check.
+3. **Smart Import Engine (`src/utils/smartImport.ts`):**
+   - Supports XLSX, XLS, CSV, TSV, TXT with memory-pool-safe ArrayBuffer handling.
+   - Auto-detects encoding (UTF-8, Windows-1256 Arabic), delimiters, headers, and European decimal commas.
 
-4. **Column Mapping Wizard (`src/components/ColumnMappingWizard.tsx`):**
-   - Gating review modal before entering batch data grid.
-   - Manual dropdown mapping, auto-detect, swap X/Y, reset, and localStorage profile save/load.
-   - Validation barriers preventing duplicate X/Y roles.
+4. **Smart Column Detection & Mapping Wizard (`src/utils/smartColumnDetection.ts`, `src/components/ColumnMappingWizard.tsx`):**
+   - Bilingual synonym dictionary for X, Y, Z, Point ID, Name, CRS, Datum, Zone.
+   - Value range bounds validation and localStorage profile persistence.
 
 5. **Batch Data Grid & Two-Way Map Sync (`src/components/BatchTab.tsx`, `src/components/MapModal.tsx`):**
-   - Two-way interactive map-table row selection and highlighting.
    - Non-destructive attribute preservation and chunked batch transformation.
    - Multi-format export center with formula injection protection (CWE-1236).
 
-6. **MDAR Excel Reconstruction (`excel/MDAR_Converter.xlsx` — 21 Sheets):**
-   - 21 authentic sheets: `00_Home` through `20_Metadata`.
-   - Genuine dynamic OpenXML formulas (zero VBA/macros).
-   - Real UTM, Egypt ETM, Arab grids, 2D Affine, geodesy tools, and ground-truth validation.
-   - Size on disk: 48,095 bytes.
-
-7. **GitHub Pages & Offline Production:**
-   - Production bundle in `dist/` with relative base paths (`./`) compatible with `https://ahmadibrahim4geo.github.io/MDAR/`.
+6. **GitHub Pages & Offline Production:**
+   - Production bundle in `dist/` with relative base paths (`./`).
    - Isolated user-testing distribution in `dist/user-testing/`.
 
 ## Verification Summary (DoneProof Standard)
 - **T0 — Static & Lint:** `npm.cmd run lint` (0 errors, `tsc --noEmit`).
-- **T0 — Production Build:** `npm.cmd run build` (Clean build in 2.79s).
+- **T0 — Production Build:** `npm.cmd run build` (Clean build in 3.02s).
+- **T0 — MS Excel Open:** 0 repair/recovery dialogs, clean load with 8 sheets (2 hidden, 6 visible).
 - **T1 — Mathematical Precision:**
   - `baseline_math.ts`: 8/8 tests passed (< 6mm residual).
-  - `test_arab_crs_transformations.ts`: 12/12 Arab & global CRS passed (UTM 0.000mm).
+  - `test_arab_crs_transformations.ts`: 12/12 Arab & global CRS passed.
+  - `test_excel_application_com.ps1`: Single Point dynamic recalculation verified; Accuracy QA 6/6 passed (residual < 0.05mm).
 - **T2 — UI & Import Integration:**
   - `test_smart_import_and_detection.ts`: 5/5 test suites passed.
+  - Batch Table auto-expansion verified in real Excel (`MDAR_BatchTable` expanded to 7 rows).
 - **T3 — File Format & Security Verification:**
   - `test_true_xlsx_roundtrip.ts`: 5/5 tests passed (lossless float readback, CWE-1236 defense).
   - `test_vector_reprojection.ts`: 5/5 tests passed (Shapefile, GeoJSON, KML, XXE defense).
-  - `test_excel_companion_verification.ts`: 21/21 sheets verified, 197 catalog entries, 4 ground-truth benchmarks.
+  - `test_excel_companion_verification.ts`: 100% passed, TR_0007 and TR_0008 recorded.
+- **T3 — Real Visual Screenshots:** 6 authentic PNG captures in `testing results/screenshots/`.
 - **T4 — Offline PWA:** PWA manifest and Service Worker pre-caching configured for 100% offline field operation.
 - **Audit Reports:**
   - [reports/01_FINAL_DELIVERY_DONEPROOF.md](file:///D:/My%20Software/MDAR/reports/01_FINAL_DELIVERY_DONEPROOF.md)
   - [reports/02_UNIFIED_WEB_EXCEL_DONEPROOF.md](file:///D:/My%20Software/MDAR/reports/02_UNIFIED_WEB_EXCEL_DONEPROOF.md)
-- **Development Journal:** 18 append-only records with SHA-256 hash chains in `.agent-development-log/`.
+  - [reports/03_MDAR_EXCEL_CRITICAL_RECONSTRUCTION_DONEPROOF.md](file:///D:/My%20Software/MDAR/reports/03_MDAR_EXCEL_CRITICAL_RECONSTRUCTION_DONEPROOF.md)
+- **Development Journal:** 20 append-only records with SHA-256 hash chains in `.agent-development-log/`.

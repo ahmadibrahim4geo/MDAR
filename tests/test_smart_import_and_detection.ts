@@ -81,9 +81,10 @@ function runSmartImportTests() {
 
   // 5. Test Reading Real Excel Companion Workbook
   const workbookPath = path.resolve(process.cwd(), "excel/MDAR_Converter.xlsx");
-  const buffer = fs.readFileSync(workbookPath).buffer;
+  const fileBuf = fs.readFileSync(workbookPath);
+  const arrayBuf = fileBuf.buffer.slice(fileBuf.byteOffset, fileBuf.byteOffset + fileBuf.byteLength);
   
-  smartImportFile({ name: "MDAR_Converter.xlsx", buffer }, { sheetName: "03_Batch_Converter" })
+  smartImportFile({ name: "MDAR_Converter.xlsx", buffer: arrayBuf }, { sheetName: "02_Batch_Converter" })
     .then((result) => {
       console.log(`[PASS] Real XLSX Smart Import ("${result.fileName}")`);
       console.log(`  Total Rows: ${result.totalRows} | Total Cols: ${result.totalCols}`);

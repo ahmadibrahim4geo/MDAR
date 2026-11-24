@@ -233,7 +233,12 @@ export async function smartImportFile(
   if (fileType === "xlsx") {
     try {
       // In browser File or ArrayBuffer
-      const input = "buffer" in file ? file.buffer : file;
+      let input: any = "buffer" in file ? file.buffer : file;
+      if (input && typeof Buffer !== "undefined" && Buffer.isBuffer(input)) {
+        input = input.buffer.slice(input.byteOffset, input.byteOffset + input.byteLength);
+      } else if (input && input.byteOffset !== undefined && input.byteLength !== undefined && input.buffer instanceof ArrayBuffer) {
+        input = input.buffer.slice(input.byteOffset, input.byteOffset + input.byteLength);
+      }
       const readResult = (await (readXlsxFile as any)(input, {
         sheet: options?.sheetName
       })) as any;
